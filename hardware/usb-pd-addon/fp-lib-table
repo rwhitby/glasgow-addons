@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name pkl_connectors)(type KiCad)(uri ${KIPRJMOD}/../../lib/pkl/pkl_connectors.pretty)(options "")(descr ""))
+  (lib (name pkl_pads)(type KiCad)(uri ${KIPRJMOD}/../../lib/pkl/pkl_pads.pretty)(options "")(descr ""))
+  (lib (name pkl_pin_headers)(type KiCad)(uri ${KIPRJMOD}/../../lib/pkl/pkl_pin_headers.pretty)(options "")(descr ""))
+  (lib (name pkl_dipol)(type KiCad)(uri ${KIPRJMOD}/../../lib/pkl/pkl_dipol.pretty)(options "")(descr ""))
+)
