@@ -1214,7 +1214,7 @@ A5
 Text Label 3350 2050 2    50   ~ 0
 A4
 Text Label 3350 1950 2    50   ~ 0
-~FSEN
+~FSPU
 Text Label 5200 2650 0    50   ~ 0
 A5
 Text Label 4900 2650 0    50   ~ 0
@@ -1918,7 +1918,7 @@ F 3 "" H 4550 7500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 3950 7000 2    50   ~ 0
-~FSEN
+~FSPU
 Wire Wire Line
 	5000 7200 5000 7300
 Text Label 2100 2250 0    50   ~ 0
