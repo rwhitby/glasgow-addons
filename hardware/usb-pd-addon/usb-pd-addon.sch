@@ -17,16 +17,12 @@ Text Label 2100 1750 0    50   ~ 0
 USBN_3V3
 Text Label 2100 1950 0    50   ~ 0
 USBP_3V3
-Text Label 2100 1850 0    50   ~ 0
-USBP_DIR
-Text Label 2100 1650 0    50   ~ 0
-USBN_DIR
 Text Label 3350 2350 2    50   ~ 0
-FLT_N
+~FLT
 Text Label 3350 2250 2    50   ~ 0
 VEN
 Text Label 3350 1850 2    50   ~ 0
-INT_N
+~INT
 Text Label 3350 1750 2    50   ~ 0
 SCL
 Text Label 3350 1650 2    50   ~ 0
@@ -218,7 +214,7 @@ SDA
 Text Label 5950 2000 2    50   ~ 0
 SCL
 Text Label 5950 2100 2    50   ~ 0
-INT_N
+~INT
 Wire Wire Line
 	7050 1900 7150 1900
 Text Label 7150 1900 0    50   ~ 0
@@ -366,7 +362,7 @@ F 3 "" H 9500 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 10000 4100 0    50   ~ 0
-FLT_N
+~FLT
 $Comp
 L pkl_device:pkl_R R8
 U 1 1 6047D0ED
@@ -439,10 +435,6 @@ Text Label 2100 2350 0    50   ~ 0
 SBU1_3V3
 Text Label 2100 2150 0    50   ~ 0
 SBU2_3V3
-Text Label 2100 2250 0    50   ~ 0
-SBU1_DIR
-Text Label 2100 2050 0    50   ~ 0
-SBU2_DIR
 $Comp
 L power:+3V3 #PWR018
 U 1 1 605624C1
@@ -1184,14 +1176,14 @@ $EndComp
 $Comp
 L pkl_device:pkl_R R4
 U 1 1 6043A2B7
-P 4600 2450
-F 0 "R4" H 4670 2496 50  0000 L CNN
-F 1 "2K2" H 4670 2405 50  0000 L CNN
-F 2 "pkl_dipol:R_0603" V 4530 2450 30  0001 C CNN
-F 3 "" H 4600 2450 30  0000 C CNN
-F 4 "C4190" H 4600 2450 50  0001 C CNN "LCSC"
-	1    4600 2450
-	1    0    0    -1  
+P 4050 6800
+F 0 "R4" H 4120 6846 50  0000 L CNN
+F 1 "2K2" H 4120 6755 50  0000 L CNN
+F 2 "pkl_dipol:R_0603" V 3980 6800 30  0001 C CNN
+F 3 "" H 4050 6800 30  0000 C CNN
+F 4 "C4190" H 4050 6800 50  0001 C CNN "LCSC"
+	1    4050 6800
+	-1   0    0    -1  
 $EndComp
 $Comp
 L pkl_device:pkl_R R5
@@ -1217,18 +1209,16 @@ F 4 "C4190" H 5200 2450 50  0001 C CNN "LCSC"
 	1    5200 2450
 	1    0    0    -1  
 $EndComp
-Text Label 3350 1950 2    50   ~ 0
-A3
-Text Label 3350 2050 2    50   ~ 0
-A4
 Text Label 3350 2150 2    50   ~ 0
 A5
-Text Label 4600 2650 0    50   ~ 0
-A3
-Text Label 4900 2650 0    50   ~ 0
+Text Label 3350 2050 2    50   ~ 0
 A4
+Text Label 3350 1950 2    50   ~ 0
+~FSEN
 Text Label 5200 2650 0    50   ~ 0
 A5
+Text Label 4900 2650 0    50   ~ 0
+A4
 Wire Wire Line
 	7650 4400 7650 4200
 $Comp
@@ -1327,9 +1317,8 @@ Connection ~ 6650 5550
 Connection ~ 7050 5350
 Text Label 6100 5550 0    50   ~ 0
 ADJ_SBU
-NoConn ~ 4600 2250
-NoConn ~ 4900 2250
 NoConn ~ 5200 2250
+NoConn ~ 4900 2250
 $Comp
 L pkl_device:pkl_R_Small R15
 U 1 1 602B3AC3
@@ -1899,4 +1888,128 @@ Wire Wire Line
 Connection ~ 9950 3900
 Wire Wire Line
 	9950 3900 10000 3900
+$Comp
+L pkl_device:pkl_R_Small R31
+U 1 1 6029F428
+P 5000 7400
+F 0 "R31" H 4941 7354 50  0000 R CNN
+F 1 "1K5" H 4941 7445 50  0000 R CNN
+F 2 "pkl_dipol:R_0603" V 4930 7400 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1201T5E_C22765.pdf" V 5000 7400 50  0001 C CNN
+F 4 "C22843" V 5000 7400 50  0001 C CNN "LCSC"
+	1    5000 7400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5000 7500 5000 7550
+Wire Wire Line
+	5000 7550 5100 7550
+Text Label 5100 7550 0    50   ~ 0
+USBP
+$Comp
+L power:GND #PWR0112
+U 1 1 602DBD95
+P 4550 7500
+F 0 "#PWR0112" H 4550 7250 50  0001 C CNN
+F 1 "GND" H 4555 7327 50  0000 C CNN
+F 2 "" H 4550 7500 50  0001 C CNN
+F 3 "" H 4550 7500 50  0001 C CNN
+	1    4550 7500
+	1    0    0    -1  
+$EndComp
+Text Label 3950 7000 2    50   ~ 0
+~FSEN
+Wire Wire Line
+	5000 7200 5000 7300
+Text Label 2100 2250 0    50   ~ 0
+SBU1_DIR
+Text Label 2100 2050 0    50   ~ 0
+SBU2_DIR
+Text Label 2100 1850 0    50   ~ 0
+USBP_DIR
+Text Label 2100 1650 0    50   ~ 0
+USBN_DIR
+$Comp
+L usb-pd-addon-rescue:NC7SZ125P5X-dk_Logic-Buffers-Drivers-Receivers-Transceivers U9
+U 1 1 60278052
+P 4550 7100
+F 0 "U9" H 4794 7153 60  0000 L CNN
+F 1 "NC7SZ125P5X" H 4794 7047 60  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-353_SC-70-5" H 4750 7300 60  0001 L CNN
+F 3 "https://www.onsemi.com/pub/Collateral/NC7SZ125-D.PDF" H 4750 7400 60  0001 L CNN
+F 4 "NC7SZ125P5XCT-ND" H 4750 7500 60  0001 L CNN "Digi-Key_PN"
+F 5 "NC7SZ125P5X" H 4750 7600 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 4750 7700 60  0001 L CNN "Category"
+F 7 "Logic - Buffers, Drivers, Receivers, Transceivers" H 4750 7800 60  0001 L CNN "Family"
+F 8 "https://www.onsemi.com/pub/Collateral/NC7SZ125-D.PDF" H 4750 7900 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/NC7SZ125P5X/NC7SZ125P5XCT-ND/673393" H 4750 8000 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC BUF NON-INVERT 5.5V SC70-5" H 4750 8100 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 4750 8200 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 4750 8300 60  0001 L CNN "Status"
+	1    4550 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 6600 4550 6800
+$Comp
+L power:+3V3 #PWR023
+U 1 1 604FC608
+P 4550 6600
+F 0 "#PWR023" H 4550 6450 50  0001 C CNN
+F 1 "+3V3" H 4565 6773 50  0000 C CNN
+F 2 "" H 4550 6600 50  0001 C CNN
+F 3 "" H 4550 6600 50  0001 C CNN
+	1    4550 6600
+	1    0    0    -1  
+$EndComp
+Connection ~ 4550 6600
+$Comp
+L Device:C_Small C15
+U 1 1 6051DD76
+P 4800 6800
+F 0 "C15" H 4892 6846 50  0000 L CNN
+F 1 "0.1u" H 4892 6755 50  0000 L CNN
+F 2 "pkl_dipol:C_0603" H 4800 6800 50  0001 C CNN
+F 3 "~" H 4800 6800 50  0001 C CNN
+F 4 "C14663" H 4800 6800 50  0001 C CNN "LCSC"
+	1    4800 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 7200 5000 7200
+Wire Wire Line
+	4800 6700 4800 6600
+Wire Wire Line
+	4800 6600 4550 6600
+Wire Wire Line
+	4550 7400 4550 7450
+Wire Wire Line
+	4800 7450 4550 7450
+Wire Wire Line
+	4800 6900 4800 7450
+Connection ~ 4550 7450
+Wire Wire Line
+	4550 7450 4550 7500
+Wire Wire Line
+	3950 7000 4050 7000
+Wire Wire Line
+	4250 7200 4200 7200
+Wire Wire Line
+	4200 7200 4200 6600
+Wire Wire Line
+	4200 6600 4550 6600
+Connection ~ 4050 7000
+Wire Wire Line
+	4050 7000 4250 7000
+$Comp
+L power:+5V #PWR0113
+U 1 1 60659740
+P 4050 6600
+F 0 "#PWR0113" H 4050 6450 50  0001 C CNN
+F 1 "+5V" H 4065 6773 50  0000 C CNN
+F 2 "" H 4050 6600 50  0001 C CNN
+F 3 "" H 4050 6600 50  0001 C CNN
+	1    4050 6600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

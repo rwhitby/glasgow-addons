@@ -1,0 +1,36 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# NC7SZ125P5X-dk_Logic-Buffers-Drivers-Receivers-Transceivers
+#
+DEF NC7SZ125P5X-dk_Logic-Buffers-Drivers-Receivers-Transceivers U 0 0 Y Y 1 F N
+F0 "U" -150 250 60 H V C CNN
+F1 "NC7SZ125P5X-dk_Logic-Buffers-Drivers-Receivers-Transceivers" 700 -475 60 H V C CNN
+F2 "digikey-footprints:SOT-353" 200 200 60 H I L CNN
+F3 "https://www.onsemi.com/pub/Collateral/NC7SZ125-D.PDF" 200 300 60 H I L CNN
+F4 "NC7SZ125P5XCT-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "NC7SZ125P5X" 200 500 60 H I L CNN "MPN"
+F6 "Integrated Circuits (ICs)" 200 600 60 H I L CNN "Category"
+F7 "Logic - Buffers, Drivers, Receivers, Transceivers" 200 700 60 H I L CNN "Family"
+F8 "https://www.onsemi.com/pub/Collateral/NC7SZ125-D.PDF" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/on-semiconductor/NC7SZ125P5X/NC7SZ125P5XCT-ND/673393" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "IC BUF NON-INVERT 5.5V SC70-5" 200 1000 60 H I L CNN "Description"
+F11 "ON Semiconductor" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+C -50 -60 10 0 1 0 N
+S -200 200 100 -200 0 1 0 f
+P 2 0 1 0 -50 50 -50 -50 N
+P 2 0 1 0 0 -100 100 -100 N
+P 3 0 1 0 -200 100 -50 100 -50 50 N
+P 3 0 1 0 -100 -100 -150 -100 -200 -100 N
+P 4 0 1 0 -100 -50 -100 -150 0 -100 -100 -50 N
+X ~OE 1 -300 100 100 R 50 50 1 1 I
+X A 2 -300 -100 100 R 50 50 1 1 I
+X GND 3 0 -300 100 U 50 50 1 1 W
+X Y 4 200 -100 100 L 50 50 1 1 O
+X VCC 5 0 300 100 D 50 50 1 1 W
+ENDDRAW
+ENDDEF
+#
+#End Library
