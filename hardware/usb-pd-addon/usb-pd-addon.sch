@@ -165,8 +165,6 @@ NoConn ~ 1500 1550
 NoConn ~ 2000 1550
 Wire Wire Line
 	2000 2350 2100 2350
-Wire Wire Line
-	2000 2450 2100 2450
 $Comp
 L Connector_Generic:Conn_02x10_Odd_Even J2
 U 1 1 5F4591DD
@@ -314,8 +312,6 @@ F 4 "C4190" H 5050 1650 50  0001 C CNN "LCSC"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4050 1450 4350 1450
-Wire Wire Line
 	5050 1450 5350 1450
 $Comp
 L Power_Management:AP2171W U2
@@ -407,16 +403,16 @@ $EndComp
 $Comp
 L power:PWR_FLAG #FLG02
 U 1 1 604BE07A
-P 1100 2650
-F 0 "#FLG02" H 1100 2725 50  0001 C CNN
-F 1 "PWR_FLAG" H 1100 2823 50  0000 C CNN
-F 2 "" H 1100 2650 50  0001 C CNN
-F 3 "~" H 1100 2650 50  0001 C CNN
-	1    1100 2650
+P 1700 2650
+F 0 "#FLG02" H 1700 2725 50  0001 C CNN
+F 1 "PWR_FLAG" H 1700 2823 50  0000 C CNN
+F 2 "" H 1700 2650 50  0001 C CNN
+F 3 "~" H 1700 2650 50  0001 C CNN
+	1    1700 2650
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1100 2650 1400 2650
+	1700 2650 1400 2650
 Connection ~ 1400 2650
 $Comp
 L power:+5V #PWR014
@@ -1418,17 +1414,6 @@ F 3 "" H 10800 6050 50  0001 C CNN
 	1    10800 6050
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J6
-U 1 1 603265A8
-P 2750 1550
-F 0 "J6" H 2668 1767 50  0000 C CNN
-F 1 "EXT" H 2668 1676 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2750 1550 50  0001 C CNN
-F 3 "~" H 2750 1550 50  0001 C CNN
-	1    2750 1550
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	2950 1550 3450 1550
 $Comp
@@ -1442,78 +1427,6 @@ F 3 "" H 2950 1650 50  0001 C CNN
 	1    2950 1650
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J7
-U 1 1 603739D5
-P 2750 2100
-F 0 "J7" H 2668 2317 50  0000 C CNN
-F 1 "TP1" H 2668 2226 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2750 2100 50  0001 C CNN
-F 3 "~" H 2750 2100 50  0001 C CNN
-	1    2750 2100
-	-1   0    0    -1  
-$EndComp
-NoConn ~ 2950 2100
-$Comp
-L Connector_Generic:Conn_01x02 J8
-U 1 1 603A3767
-P 2250 2750
-F 0 "J8" H 2168 2967 50  0000 C CNN
-F 1 "TP2" H 2168 2876 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2250 2750 50  0001 C CNN
-F 3 "~" H 2250 2750 50  0001 C CNN
-	1    2250 2750
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J9
-U 1 1 603ACE4E
-P 2850 2750
-F 0 "J9" H 2768 2967 50  0000 C CNN
-F 1 "TP3" H 2768 2876 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2850 2750 50  0001 C CNN
-F 3 "~" H 2850 2750 50  0001 C CNN
-	1    2850 2750
-	-1   0    0    -1  
-$EndComp
-NoConn ~ 3050 2750
-$Comp
-L power:GND #PWR0102
-U 1 1 603E077C
-P 2950 2200
-F 0 "#PWR0102" H 2950 1950 50  0001 C CNN
-F 1 "GND" H 2955 2024 50  0000 C CNN
-F 2 "" H 2950 2200 50  0001 C CNN
-F 3 "" H 2950 2200 50  0001 C CNN
-	1    2950 2200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0103
-U 1 1 603E09D8
-P 2450 2850
-F 0 "#PWR0103" H 2450 2600 50  0001 C CNN
-F 1 "GND" H 2455 2674 50  0000 C CNN
-F 2 "" H 2450 2850 50  0001 C CNN
-F 3 "" H 2450 2850 50  0001 C CNN
-	1    2450 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0104
-U 1 1 603E0E3A
-P 3050 2850
-F 0 "#PWR0104" H 3050 2600 50  0001 C CNN
-F 1 "GND" H 3055 2674 50  0000 C CNN
-F 2 "" H 3050 2850 50  0001 C CNN
-F 3 "" H 3050 2850 50  0001 C CNN
-	1    3050 2850
-	1    0    0    -1  
-$EndComp
-Text Label 2550 2750 0    50   ~ 0
-BS
-Wire Wire Line
-	2450 2750 2550 2750
 $Comp
 L pkl_device:pkl_R R7
 U 1 1 6042FE6E
@@ -2012,4 +1925,117 @@ F 3 "" H 4050 6600 50  0001 C CNN
 	1    4050 6600
 	1    0    0    -1  
 $EndComp
+$Comp
+L pkl_device:pkl_R_Small R32
+U 1 1 60329F79
+P 900 2600
+F 0 "R32" H 841 2554 50  0000 R CNN
+F 1 "20K" H 841 2645 50  0000 R CNN
+F 2 "pkl_dipol:R_0603" V 830 2600 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF2002T5E_C4184.pdf" V 900 2600 50  0001 C CNN
+F 4 "C4184" V 900 2600 50  0001 C CNN "LCSC"
+	1    900  2600
+	-1   0    0    1   
+$EndComp
+Connection ~ 900  2450
+Wire Wire Line
+	900  2450 900  2500
+$Comp
+L Device:LED D1
+U 1 1 6034D943
+P 900 2850
+F 0 "D1" V 939 2732 50  0000 R CNN
+F 1 "GRN" V 848 2732 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 900 2850 50  0001 C CNN
+F 3 "~" H 900 2850 50  0001 C CNN
+	1    900  2850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR024
+U 1 1 6034E181
+P 900 3000
+F 0 "#PWR024" H 900 2750 50  0001 C CNN
+F 1 "GND" H 905 2824 50  0000 C CNN
+F 2 "" H 900 3000 50  0001 C CNN
+F 3 "" H 900 3000 50  0001 C CNN
+	1    900  3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L pkl_device:pkl_R_Small R33
+U 1 1 6034EF15
+P 4250 1600
+F 0 "R33" H 4191 1554 50  0000 R CNN
+F 1 "20K" H 4191 1645 50  0000 R CNN
+F 2 "pkl_dipol:R_0603" V 4180 1600 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF2002T5E_C4184.pdf" V 4250 1600 50  0001 C CNN
+F 4 "C4184" V 4250 1600 50  0001 C CNN "LCSC"
+	1    4250 1600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4250 1450 4250 1500
+$Comp
+L Device:LED D2
+U 1 1 6034EF20
+P 4250 1850
+F 0 "D2" V 4289 1732 50  0000 R CNN
+F 1 "GRN" V 4198 1732 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 4250 1850 50  0001 C CNN
+F 3 "~" H 4250 1850 50  0001 C CNN
+	1    4250 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR025
+U 1 1 6034EF2A
+P 4250 2000
+F 0 "#PWR025" H 4250 1750 50  0001 C CNN
+F 1 "GND" H 4255 1824 50  0000 C CNN
+F 2 "" H 4250 2000 50  0001 C CNN
+F 3 "" H 4250 2000 50  0001 C CNN
+	1    4250 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 1450 4250 1450
+Wire Wire Line
+	4250 1450 4350 1450
+Connection ~ 4250 1450
+$Comp
+L power:GND #PWR0102
+U 1 1 603E077C
+P 2700 2550
+F 0 "#PWR0102" H 2700 2300 50  0001 C CNN
+F 1 "GND" H 2705 2374 50  0000 C CNN
+F 2 "" H 2700 2550 50  0001 C CNN
+F 3 "" H 2700 2550 50  0001 C CNN
+	1    2700 2550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J7
+U 1 1 603739D5
+P 2900 2450
+F 0 "J7" H 2818 2667 50  0000 C CNN
+F 1 "TPBS" H 2818 2576 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2900 2450 50  0001 C CNN
+F 3 "~" H 2900 2450 50  0001 C CNN
+	1    2900 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J6
+U 1 1 603265A8
+P 2750 1550
+F 0 "J6" H 2668 1767 50  0000 C CNN
+F 1 "TPAS" H 2668 1676 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2750 1550 50  0001 C CNN
+F 3 "~" H 2750 1550 50  0001 C CNN
+	1    2750 1550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 2450 2700 2450
 $EndSCHEMATC
