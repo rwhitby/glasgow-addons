@@ -1859,6 +1859,7 @@ F 9 "/product-detail/en/on-semiconductor/NC7SZ125P5X/NC7SZ125P5XCT-ND/673393" H 
 F 10 "IC BUF NON-INVERT 5.5V SC70-5" H 4750 8100 60  0001 L CNN "Description"
 F 11 "ON Semiconductor" H 4750 8200 60  0001 L CNN "Manufacturer"
 F 12 "Active" H 4750 8300 60  0001 L CNN "Status"
+F 13 "C112084" H 4550 7100 50  0001 C CNN "LCSC"
 	1    4550 7100
 	1    0    0    -1  
 $EndComp
@@ -1948,6 +1949,7 @@ F 0 "D1" V 939 2732 50  0000 R CNN
 F 1 "GRN" V 848 2732 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric" H 900 2850 50  0001 C CNN
 F 3 "~" H 900 2850 50  0001 C CNN
+F 4 "C72043" V 900 2850 50  0001 C CNN "LCSC"
 	1    900  2850
 	0    -1   -1   0   
 $EndComp
@@ -1984,6 +1986,7 @@ F 0 "D2" V 4289 1732 50  0000 R CNN
 F 1 "GRN" V 4198 1732 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric" H 4250 1850 50  0001 C CNN
 F 3 "~" H 4250 1850 50  0001 C CNN
+F 4 "C72043" V 4250 1850 50  0001 C CNN "LCSC"
 	1    4250 1850
 	0    -1   -1   0   
 $EndComp
@@ -2038,4 +2041,6 @@ F 3 "~" H 2750 1550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2000 2450 2700 2450
+Text Notes 900  7250 0    50   ~ 0
+Do I need two 15K switchable pull-downs on D+/D- to be a USB host?
 $EndSCHEMATC
