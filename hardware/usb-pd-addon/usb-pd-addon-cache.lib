@@ -20,6 +20,33 @@ X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Connector_Generic_Conn_02x03_Odd_Even
+#
+DEF Connector_Generic_Conn_02x03_Odd_Even J 0 40 Y N 1 F N
+F0 "J" 50 200 50 H V C CNN
+F1 "Connector_Generic_Conn_02x03_Odd_Even" 50 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_2x??_*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 150 150 -150 1 1 10 f
+S 150 -95 100 -105 1 1 6 N
+S 150 5 100 -5 1 1 6 N
+S 150 105 100 95 1 1 6 N
+X Pin_1 1 -200 100 150 R 50 50 1 1 P
+X Pin_2 2 300 100 150 L 50 50 1 1 P
+X Pin_3 3 -200 0 150 R 50 50 1 1 P
+X Pin_4 4 300 0 150 L 50 50 1 1 P
+X Pin_5 5 -200 -100 150 R 50 50 1 1 P
+X Pin_6 6 300 -100 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Connector_Generic_Conn_02x05_Odd_Even
 #
 DEF Connector_Generic_Conn_02x05_Odd_Even J 0 40 Y N 1 F N
@@ -440,38 +467,6 @@ F3 "" 0 0 50 H I C CNN
 DRAW
 P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
 X pwr 1 0 0 0 U 50 50 0 0 w
-ENDDRAW
-ENDDEF
-#
-# usb-pd-addon-rescue_NC7SZ125P5X-dk_Logic-Buffers-Drivers-Receivers-Transceivers
-#
-DEF usb-pd-addon-rescue_NC7SZ125P5X-dk_Logic-Buffers-Drivers-Receivers-Transceivers U 0 0 Y Y 1 F N
-F0 "U" -150 250 60 H V C CNN
-F1 "usb-pd-addon-rescue_NC7SZ125P5X-dk_Logic-Buffers-Drivers-Receivers-Transceivers" 700 -475 60 H V C CNN
-F2 "digikey-footprints:SOT-353" 200 200 60 H I L CNN
-F3 "https://www.onsemi.com/pub/Collateral/NC7SZ125-D.PDF" 200 300 60 H I L CNN
-F4 "NC7SZ125P5XCT-ND" 200 400 60 H I L CNN "Digi-Key_PN"
-F5 "NC7SZ125P5X" 200 500 60 H I L CNN "MPN"
-F6 "Integrated Circuits (ICs)" 200 600 60 H I L CNN "Category"
-F7 "Logic - Buffers, Drivers, Receivers, Transceivers" 200 700 60 H I L CNN "Family"
-F8 "https://www.onsemi.com/pub/Collateral/NC7SZ125-D.PDF" 200 800 60 H I L CNN "DK_Datasheet_Link"
-F9 "/product-detail/en/on-semiconductor/NC7SZ125P5X/NC7SZ125P5XCT-ND/673393" 200 900 60 H I L CNN "DK_Detail_Page"
-F10 "IC BUF NON-INVERT 5.5V SC70-5" 200 1000 60 H I L CNN "Description"
-F11 "ON Semiconductor" 200 1100 60 H I L CNN "Manufacturer"
-F12 "Active" 200 1200 60 H I L CNN "Status"
-DRAW
-C -50 -60 10 0 1 0 N
-S -200 200 100 -200 0 1 0 f
-P 2 0 1 0 -50 50 -50 -50 N
-P 2 0 1 0 0 -100 100 -100 N
-P 3 0 1 0 -200 100 -50 100 -50 50 N
-P 3 0 1 0 -100 -100 -150 -100 -200 -100 N
-P 4 0 1 0 -100 -50 -100 -150 0 -100 -100 -50 N
-X ~OE 1 -300 100 100 R 50 50 1 1 I
-X A 2 -300 -100 100 R 50 50 1 1 I
-X GND 3 0 -300 100 U 50 50 1 1 W
-X Y 4 200 -100 100 L 50 50 1 1 O
-X VCC 5 0 300 100 D 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
