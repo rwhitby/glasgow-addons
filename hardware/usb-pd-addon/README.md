@@ -48,4 +48,9 @@
 
 - Potentially support large extended messages by streaming the FUSB302 FIFO through the FPGA
 
+## Current Status
 
+![schematic](./usb-pd-addon.pdf)
+![pcb](./usb-pd-addon-pcb.pdf)
+![front](./usb-pd-addon-front.png)
+![back](./usb-pd-addon-back.png)
