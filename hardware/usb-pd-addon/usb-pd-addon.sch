@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Glasgow USB-PD Addon"
 Date ""
-Rev "V0.3a"
+Rev "V0.4a"
 Comp "License: CC-BY-SA 4.0"
 Comment1 "(C) 2020-2021 Piotr Esden-Tempski <piotr@esden.net>"
 Comment2 "(C) 2020-2021 1BitSquared <info@1bitsquared.com>"
@@ -190,7 +190,7 @@ F 4 "C50982" H 1800 2050 50  0001 C CNN "LCSC"
 	-1   0    0    1   
 $EndComp
 Text Label 3350 1550 2    50   ~ 0
-VBUS
+AS
 Wire Wire Line
 	3950 1550 4050 1550
 Wire Wire Line
@@ -199,8 +199,8 @@ $Comp
 L Interface_USB:FUSB302BMPX U1
 U 1 1 60217A5E
 P 6550 2000
-F 0 "U1" H 6200 2400 50  0000 C CNN
-F 1 "FUSB302B" H 7000 2400 50  0000 C CNN
+F 0 "U1" H 6900 2450 50  0000 C CNN
+F 1 "FUSB302B" H 6900 2350 50  0000 C CNN
 F 2 "Package_DFN_QFN:WQFN-14-1EP_2.5x2.5mm_P0.5mm_EP1.45x1.45mm" H 6550 1250 50  0001 C CNN
 F 3 "http://www.onsemi.com/pub/Collateral/FUSB302B-D.PDF" H 6650 1600 50  0001 C CNN
 F 4 "C132291" H 6550 1150 50  0001 C CNN "LCSC"
@@ -217,12 +217,8 @@ Wire Wire Line
 	7050 1900 7150 1900
 Text Label 7150 1900 0    50   ~ 0
 VBUS
-Wire Wire Line
-	7050 2000 7150 2000
 Text Label 7150 2000 0    50   ~ 0
 CC1
-Wire Wire Line
-	7050 2100 7150 2100
 Text Label 7150 2100 0    50   ~ 0
 CC2
 Wire Wire Line
@@ -252,18 +248,6 @@ Text Label 8950 2500 0    50   ~ 0
 SBU1
 Text Label 8950 2600 0    50   ~ 0
 SBU2
-$Comp
-L Connector:USB_C_Receptacle_USB2.0 J3
-U 1 1 6025891B
-P 8250 2000
-F 0 "J3" H 8225 2887 60  0000 C CNN
-F 1 "USB_TYPE_C" H 8225 2781 60  0000 C CNN
-F 2 "pkl_connectors:USB_C_Receptacle_HRO_TYPE-C-31-M-12" H 8300 700 60  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 8250 2000 60  0001 C CNN
-F 4 "C165948" H 8250 600 50  0001 C CNN "LCSC"
-	1    8250 2000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8850 1400 8950 1400
 $Comp
@@ -345,7 +329,7 @@ VEN
 Wire Wire Line
 	9900 3900 9950 3900
 Text Label 10000 3900 0    50   ~ 0
-VBUS
+VBUS_DFP
 $Comp
 L power:GND #PWR012
 U 1 1 604671F9
@@ -362,17 +346,17 @@ Text Label 10000 4100 0    50   ~ 0
 $Comp
 L pkl_device:pkl_R R5
 U 1 1 6047D0ED
-P 10350 3900
-F 0 "R5" H 10280 3854 50  0000 R CNN
-F 1 "1K" H 10280 3945 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 10280 3900 30  0001 C CNN
-F 3 "" H 10350 3900 30  0000 C CNN
-F 4 "C21190" H 10350 3900 50  0001 C CNN "LCSC"
-	1    10350 3900
+P 10500 3900
+F 0 "R5" H 10430 3854 50  0000 R CNN
+F 1 "1K" H 10430 3945 50  0000 R CNN
+F 2 "pkl_dipol:R_0603" V 10430 3900 30  0001 C CNN
+F 3 "" H 10500 3900 30  0000 C CNN
+F 4 "C21190" H 10500 3900 50  0001 C CNN "LCSC"
+	1    10500 3900
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	9900 4100 10350 4100
+	9900 4100 10500 4100
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 604B69CF
@@ -417,12 +401,12 @@ Connection ~ 1400 2650
 $Comp
 L power:+5V #PWR014
 U 1 1 604E2B0B
-P 10350 3700
-F 0 "#PWR014" H 10350 3550 50  0001 C CNN
-F 1 "+5V" H 10365 3873 50  0000 C CNN
-F 2 "" H 10350 3700 50  0001 C CNN
-F 3 "" H 10350 3700 50  0001 C CNN
-	1    10350 3700
+P 10500 3700
+F 0 "#PWR014" H 10500 3550 50  0001 C CNN
+F 1 "+5V" H 10515 3873 50  0000 C CNN
+F 2 "" H 10500 3700 50  0001 C CNN
+F 3 "" H 10500 3700 50  0001 C CNN
+	1    10500 3700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -959,28 +943,6 @@ F 3 "~" H 10600 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:Fiducial FID1
-U 1 1 60458FC3
-P 10300 6350
-F 0 "FID1" H 10385 6396 50  0000 L CNN
-F 1 "Fiducial" H 10385 6305 50  0000 L CNN
-F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 10300 6350 50  0001 C CNN
-F 3 "~" H 10300 6350 50  0001 C CNN
-	1    10300 6350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:Fiducial FID2
-U 1 1 60459D25
-P 10800 6350
-F 0 "FID2" H 10885 6396 50  0000 L CNN
-F 1 "Fiducial" H 10885 6305 50  0000 L CNN
-F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 10800 6350 50  0001 C CNN
-F 3 "~" H 10800 6350 50  0001 C CNN
-	1    10800 6350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Graphic:Logo_Open_Hardware_Small LOGO2
 U 1 1 60460712
 P 10600 5600
@@ -1250,9 +1212,6 @@ Wire Wire Line
 	9950 4400 9950 4500
 Wire Wire Line
 	9950 3900 9950 4200
-Connection ~ 9950 3900
-Wire Wire Line
-	9950 3900 10000 3900
 Text Label 2100 2250 0    50   ~ 0
 SBU1_DIR
 Text Label 2100 2050 0    50   ~ 0
@@ -1403,19 +1362,6 @@ Connection ~ 6550 5100
 Wire Wire Line
 	7550 4850 7550 4800
 Connection ~ 7550 4800
-$Comp
-L Mechanical:MountingHole TH?
-U 1 1 6042AAA9
-P 11000 6050
-AR Path="/60819140/6042AAA9" Ref="TH?"  Part="1" 
-AR Path="/6042AAA9" Ref="TH4"  Part="1" 
-F 0 "TH4" H 10950 6250 50  0000 L CNN
-F 1 "Mounting_Hole" H 11100 6010 50  0001 L CNN
-F 2 "pkl_pads:ToolingHole" H 11000 6050 50  0001 C CNN
-F 3 "" H 11000 6050 50  0001 C CNN
-	1    11000 6050
-	1    0    0    -1  
-$EndComp
 Text Label 10650 1600 0    50   ~ 0
 CC1
 Text Label 10650 1700 0    50   ~ 0
@@ -1428,18 +1374,6 @@ Text Label 10650 2500 0    50   ~ 0
 SBU1
 Text Label 10650 2600 0    50   ~ 0
 SBU2
-$Comp
-L Connector:USB_C_Receptacle_USB2.0 J4
-U 1 1 6044CF9E
-P 9950 2000
-F 0 "J4" H 9925 2887 60  0000 C CNN
-F 1 "USB_TYPE_C" H 9925 2781 60  0000 C CNN
-F 2 "pkl_connectors:USB_C_Receptacle_HRO_TYPE-C-31-M-12" H 10000 700 60  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 9950 2000 60  0001 C CNN
-F 4 "C165948" H 9950 600 50  0001 C CNN "LCSC"
-	1    9950 2000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10550 1400 10650 1400
 $Comp
@@ -1454,7 +1388,7 @@ F 3 "" H 9950 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 10650 1400 0    50   ~ 0
-VBUS
+VBUS_OUT
 Wire Wire Line
 	10550 2600 10650 2600
 Wire Wire Line
@@ -1580,4 +1514,265 @@ Text Label 4650 6350 0    50   ~ 0
 SBU1
 Text Label 4650 6450 0    50   ~ 0
 SBU1_3V3
+Text Label 9350 5350 0    50   ~ 0
+VBUS_OUT
+$Comp
+L power:+5V #PWR027
+U 1 1 603504DF
+P 9850 5450
+F 0 "#PWR027" H 9850 5300 50  0001 C CNN
+F 1 "+5V" H 9865 5623 50  0000 C CNN
+F 2 "" H 9850 5450 50  0001 C CNN
+F 3 "" H 9850 5450 50  0001 C CNN
+	1    9850 5450
+	1    0    0    -1  
+$EndComp
+Text Label 9350 5250 0    50   ~ 0
+VBUS
+$Comp
+L Connector:USB_C_Receptacle_USB2.0 J4
+U 1 1 6044CF9E
+P 9950 2000
+F 0 "J4" H 9925 2887 60  0000 C CNN
+F 1 "USB_TYPE_C" H 9925 2781 60  0000 C CNN
+F 2 "pkl_connectors:USB_C_Receptacle_HRO_TYPE-C-31-M-12" H 10000 700 60  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 9950 2000 60  0001 C CNN
+F 4 "C165948" H 9950 600 50  0001 C CNN "LCSC"
+	1    9950 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_C_Receptacle_USB2.0 J3
+U 1 1 6025891B
+P 8250 2000
+F 0 "J3" H 8225 2887 60  0000 C CNN
+F 1 "USB_TYPE_C" H 8225 2781 60  0000 C CNN
+F 2 "pkl_connectors:USB_C_Receptacle_HRO_TYPE-C-31-M-12" H 8300 700 60  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 8250 2000 60  0001 C CNN
+F 4 "C165948" H 8250 600 50  0001 C CNN "LCSC"
+	1    8250 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C6
+U 1 1 603FB1A5
+P 6250 1500
+F 0 "C6" H 6342 1546 50  0000 L CNN
+F 1 "1uF" H 6342 1455 50  0000 L CNN
+F 2 "pkl_dipol:C_0603" H 6250 1500 50  0001 C CNN
+F 3 "~" H 6250 1500 50  0001 C CNN
+F 4 "C15849" H 6250 1500 50  0001 C CNN "LCSC"
+	1    6250 1500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR028
+U 1 1 603FDE3B
+P 6050 1500
+F 0 "#PWR028" H 6050 1250 50  0001 C CNN
+F 1 "GND" H 6055 1327 50  0000 C CNN
+F 2 "" H 6050 1500 50  0001 C CNN
+F 3 "" H 6050 1500 50  0001 C CNN
+	1    6050 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 1500 6150 1500
+Wire Wire Line
+	6350 1500 6450 1500
+Connection ~ 6450 1500
+$Comp
+L Connector:TestPoint TP1
+U 1 1 60417B5E
+P 7400 2000
+F 0 "TP1" H 7458 2118 50  0000 L CNN
+F 1 "TestPoint" H 7458 2027 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm" H 7600 2000 50  0001 C CNN
+F 3 "~" H 7600 2000 50  0001 C CNN
+	1    7400 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 2000 7400 2000
+$Comp
+L Connector:TestPoint TP2
+U 1 1 60423398
+P 7400 2100
+F 0 "TP2" H 7342 2126 50  0000 R CNN
+F 1 "TestPoint" H 7342 2217 50  0000 R CNN
+F 2 "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm" H 7600 2100 50  0001 C CNN
+F 3 "~" H 7600 2100 50  0001 C CNN
+	1    7400 2100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7050 2100 7400 2100
+$Comp
+L Connector:TestPoint TP3
+U 1 1 604360D3
+P 7400 2500
+F 0 "TP3" H 7458 2618 50  0000 L CNN
+F 1 "TestPoint" H 7458 2527 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm" H 7600 2500 50  0001 C CNN
+F 3 "~" H 7600 2500 50  0001 C CNN
+	1    7400 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR029
+U 1 1 60436EBD
+P 7400 2500
+F 0 "#PWR029" H 7400 2250 50  0001 C CNN
+F 1 "GND" H 7405 2327 50  0000 C CNN
+F 2 "" H 7400 2500 50  0001 C CNN
+F 3 "" H 7400 2500 50  0001 C CNN
+	1    7400 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 1200 6450 1200
+Wire Wire Line
+	6450 1200 6450 1500
+Wire Wire Line
+	6150 1200 6050 1200
+Wire Wire Line
+	6050 1200 6050 1500
+Connection ~ 6050 1500
+$Comp
+L Device:C_Small C8
+U 1 1 604B01EF
+P 6250 1200
+F 0 "C8" H 6158 1154 50  0000 R CNN
+F 1 "0.1u" H 6158 1245 50  0000 R CNN
+F 2 "pkl_dipol:C_0603" H 6250 1200 50  0001 C CNN
+F 3 "~" H 6250 1200 50  0001 C CNN
+F 4 "C14663" H 6250 1200 50  0001 C CNN "LCSC"
+	1    6250 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 6052ABF1
+P 10550 1400
+F 0 "#FLG0101" H 10550 1475 50  0001 C CNN
+F 1 "PWR_FLAG" H 10550 1573 50  0000 C CNN
+F 2 "" H 10550 1400 50  0001 C CNN
+F 3 "~" H 10550 1400 50  0001 C CNN
+	1    10550 1400
+	1    0    0    -1  
+$EndComp
+Connection ~ 10550 1400
+$Comp
+L Mechanical:MountingHole TH?
+U 1 1 605480D8
+P 11000 6050
+AR Path="/60819140/605480D8" Ref="TH?"  Part="1" 
+AR Path="/605480D8" Ref="TH4"  Part="1" 
+F 0 "TH4" H 10950 6250 50  0000 L CNN
+F 1 "Mounting_Hole" H 11100 6010 50  0001 L CNN
+F 2 "pkl_pads:ToolingHole" H 11000 6050 50  0001 C CNN
+F 3 "" H 11000 6050 50  0001 C CNN
+	1    11000 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:Jumper_2_Open JP1
+U 1 1 6055AB67
+P 2950 1150
+F 0 "JP1" H 2950 1385 50  0000 C CNN
+F 1 "Jumper_2_Open" H 2950 1294 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 2950 1150 50  0001 C CNN
+F 3 "~" H 2950 1150 50  0001 C CNN
+	1    2950 1150
+	1    0    0    -1  
+$EndComp
+Text Label 2750 1150 2    50   ~ 0
+VBUS
+Text Label 3150 1150 0    50   ~ 0
+AS
+$Comp
+L Jumper:Jumper_2_Open JP2
+U 1 1 6056A031
+P 2950 3050
+F 0 "JP2" H 2950 3285 50  0000 C CNN
+F 1 "Jumper_2_Open" H 2950 3194 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 2950 3050 50  0001 C CNN
+F 3 "~" H 2950 3050 50  0001 C CNN
+	1    2950 3050
+	1    0    0    -1  
+$EndComp
+Text Label 3150 3050 0    50   ~ 0
+1.2V
+Text Label 2750 3050 2    50   ~ 0
+BS
+Text Label 8850 5250 2    50   ~ 0
+VBUS
+Connection ~ 9950 3900
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J8
+U 1 1 60659D61
+P 9050 5350
+F 0 "J8" H 9100 5667 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 9100 5576 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 9050 5350 50  0001 C CNN
+F 3 "~" H 9050 5350 50  0001 C CNN
+	1    9050 5350
+	1    0    0    -1  
+$EndComp
+Text Label 8850 5350 2    50   ~ 0
+VBUS_DFP
+Wire Wire Line
+	9350 5450 9850 5450
+$Comp
+L power:GND #PWR030
+U 1 1 60687684
+P 8850 5450
+F 0 "#PWR030" H 8850 5200 50  0001 C CNN
+F 1 "GND" H 8855 5277 50  0000 C CNN
+F 2 "" H 8850 5450 50  0001 C CNN
+F 3 "" H 8850 5450 50  0001 C CNN
+	1    8850 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 3900 10350 3900
+$Comp
+L Diode:BZD27Cxx D3
+U 1 1 606FF3F5
+P 10350 4300
+F 0 "D3" V 10304 4380 50  0000 L CNN
+F 1 "SMF5.0A" V 10395 4380 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123F" V 10350 4300 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1910111742_Littelfuse-SMF5-0A_C151296.pdf" V 10350 4300 50  0001 C CNN
+F 4 "C151296" V 10350 4300 50  0001 C CNN "LCSC"
+	1    10350 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR031
+U 1 1 6070AC03
+P 10350 4500
+F 0 "#PWR031" H 10350 4250 50  0001 C CNN
+F 1 "GND" H 10355 4327 50  0000 C CNN
+F 2 "" H 10350 4500 50  0001 C CNN
+F 3 "" H 10350 4500 50  0001 C CNN
+	1    10350 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 4450 10350 4500
+Wire Wire Line
+	10350 4150 10350 3900
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 607A2D76
+P 8850 1400
+F 0 "#FLG0102" H 8850 1475 50  0001 C CNN
+F 1 "PWR_FLAG" H 8850 1573 50  0000 C CNN
+F 2 "" H 8850 1400 50  0001 C CNN
+F 3 "~" H 8850 1400 50  0001 C CNN
+	1    8850 1400
+	1    0    0    -1  
+$EndComp
+Connection ~ 8850 1400
 $EndSCHEMATC
