@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Glasgow USB-PD Addon"
 Date ""
-Rev "V0.2a"
+Rev "V0.3a"
 Comp "License: CC-BY-SA 4.0"
 Comment1 "(C) 2020-2021 Piotr Esden-Tempski <piotr@esden.net>"
 Comment2 "(C) 2020-2021 1BitSquared <info@1bitsquared.com>"
@@ -240,47 +240,47 @@ F 3 "" H 6550 2500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6450 1600 6450 1500
-Text Label 9500 1600 0    50   ~ 0
+Text Label 8950 1600 0    50   ~ 0
 CC1
-Text Label 9500 1700 0    50   ~ 0
+Text Label 8950 1700 0    50   ~ 0
 CC2
-Text Label 9550 1900 0    50   ~ 0
+Text Label 9000 1900 0    50   ~ 0
 USBN
-Text Label 9550 2100 0    50   ~ 0
+Text Label 9000 2100 0    50   ~ 0
 USBP
-Text Label 9500 2500 0    50   ~ 0
+Text Label 8950 2500 0    50   ~ 0
 SBU1
-Text Label 9500 2600 0    50   ~ 0
+Text Label 8950 2600 0    50   ~ 0
 SBU2
 $Comp
 L Connector:USB_C_Receptacle_USB2.0 J3
 U 1 1 6025891B
-P 8800 2000
-F 0 "J3" H 8775 2887 60  0000 C CNN
-F 1 "USB_TYPE_C" H 8775 2781 60  0000 C CNN
-F 2 "pkl_connectors:USB_C_Receptacle_HRO_TYPE-C-31-M-12" H 8850 700 60  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 8800 2000 60  0001 C CNN
-F 4 "C165948" H 8800 600 50  0001 C CNN "LCSC"
-	1    8800 2000
+P 8250 2000
+F 0 "J3" H 8225 2887 60  0000 C CNN
+F 1 "USB_TYPE_C" H 8225 2781 60  0000 C CNN
+F 2 "pkl_connectors:USB_C_Receptacle_HRO_TYPE-C-31-M-12" H 8300 700 60  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 8250 2000 60  0001 C CNN
+F 4 "C165948" H 8250 600 50  0001 C CNN "LCSC"
+	1    8250 2000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9400 1400 9500 1400
+	8850 1400 8950 1400
 $Comp
 L power:GND #PWR017
 U 1 1 60290841
-P 8800 3000
-F 0 "#PWR017" H 8800 2750 50  0001 C CNN
-F 1 "GND" H 8805 2827 50  0000 C CNN
-F 2 "" H 8800 3000 50  0001 C CNN
-F 3 "" H 8800 3000 50  0001 C CNN
-	1    8800 3000
+P 8250 3000
+F 0 "#PWR017" H 8250 2750 50  0001 C CNN
+F 1 "GND" H 8255 2827 50  0000 C CNN
+F 2 "" H 8250 3000 50  0001 C CNN
+F 3 "" H 8250 3000 50  0001 C CNN
+	1    8250 3000
 	1    0    0    -1  
 $EndComp
-Text Label 9500 1400 0    50   ~ 0
+Text Label 8950 1400 0    50   ~ 0
 VBUS
 Wire Wire Line
-	9400 2600 9500 2600
+	8850 2600 8950 2600
 $Comp
 L power:+5V #PWR013
 U 1 1 604071DD
@@ -360,10 +360,10 @@ $EndComp
 Text Label 10000 4100 0    50   ~ 0
 ~FLT
 $Comp
-L pkl_device:pkl_R R8
+L pkl_device:pkl_R R5
 U 1 1 6047D0ED
 P 10350 3900
-F 0 "R8" H 10280 3854 50  0000 R CNN
+F 0 "R5" H 10280 3854 50  0000 R CNN
 F 1 "1K" H 10280 3945 50  0000 R CNN
 F 2 "pkl_dipol:R_0603" V 10280 3900 30  0001 C CNN
 F 3 "" H 10350 3900 30  0000 C CNN
@@ -459,8 +459,8 @@ Wire Wire Line
 	1750 6050 1750 6150
 Wire Wire Line
 	1350 5650 1250 5650
-Text Label 2450 5650 0    50   ~ 0
-SBU2
+Text Label 2350 5650 0    50   ~ 0
+SBU2_1V2
 Wire Wire Line
 	2150 5650 2450 5650
 Text Label 1250 5850 2    50   ~ 0
@@ -484,8 +484,8 @@ Wire Wire Line
 	3700 6050 3700 6150
 Wire Wire Line
 	3300 5650 3200 5650
-Text Label 4300 5650 0    50   ~ 0
-SBU1
+Text Label 4200 5650 0    50   ~ 0
+SBU1_1V2
 Wire Wire Line
 	4100 5650 4300 5650
 Text Label 3200 5850 2    50   ~ 0
@@ -515,8 +515,8 @@ Wire Wire Line
 	3700 4400 3700 4500
 Wire Wire Line
 	3300 4000 3200 4000
-Text Label 4300 4000 0    50   ~ 0
-USBP
+Text Label 4200 4000 0    50   ~ 0
+USBP_1V2
 Wire Wire Line
 	4100 4000 4300 4000
 Text Label 3200 4200 2    50   ~ 0
@@ -540,8 +540,8 @@ Wire Wire Line
 	1750 4400 1750 4500
 Wire Wire Line
 	1350 4000 1250 4000
-Text Label 2450 4000 0    50   ~ 0
-USBN
+Text Label 2350 4000 0    50   ~ 0
+USBN_1V2
 Wire Wire Line
 	2150 4000 2450 4000
 Wire Wire Line
@@ -600,13 +600,13 @@ F 4 "C131978" H 1750 3100 50  0001 C CNN "LCSC"
 	1    0    0    -1  
 $EndComp
 Text Label 1850 3350 0    50   ~ 0
-VIO_USB
+1.2V
 Text Label 3800 3350 0    50   ~ 0
-VIO_USB
+1.2V
 Text Label 1850 5000 0    50   ~ 0
-VIO_SBU
+1.2V
 Text Label 3800 5000 0    50   ~ 0
-VIO_SBU
+1.2V
 Wire Wire Line
 	5650 2100 5650 1850
 Wire Wire Line
@@ -622,407 +622,76 @@ F 3 "" H 5350 1450 50  0001 C CNN
 	1    5350 1450
 	1    0    0    -1  
 $EndComp
-Text Label 6650 4600 0    50   ~ 0
-1V2_USB
-Text Label 6650 4500 0    50   ~ 0
-1V5_USB
-Text Label 6650 4400 0    50   ~ 0
-1V8_USB
-Text Label 6650 4300 0    50   ~ 0
-2V5_USB
-Wire Wire Line
-	6100 4500 6100 4600
-Connection ~ 6100 4500
-Wire Wire Line
-	6100 4400 6100 4500
-Connection ~ 6100 4400
-Wire Wire Line
-	6100 4300 6100 4400
-Connection ~ 6100 4300
-Wire Wire Line
-	6100 4200 6100 4300
-$Comp
-L Connector_Generic:Conn_02x05_Odd_Even J4
-U 1 1 60A47917
-P 6300 4400
-F 0 "J4" H 6350 4817 50  0000 C CNN
-F 1 "Conn_02x05_Odd_Even" H 6350 4726 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 6300 4400 50  0001 C CNN
-F 3 "~" H 6300 4400 50  0001 C CNN
-	1    6300 4400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6600 4200 7050 4200
-Text Label 6650 4200 0    50   ~ 0
-3V3_USB
 $Comp
 L Regulator_Linear:AP2127K-ADJ U7
 U 1 1 602933B6
-P 5300 3900
-F 0 "U7" H 5300 4242 50  0000 C CNN
-F 1 "AP2127K-ADJ" H 5300 4151 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 5300 4225 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 5300 4000 50  0001 C CNN
-F 4 "C96343" H 5300 3900 50  0001 C CNN "LCSC"
-	1    5300 3900
+P 6200 4800
+F 0 "U7" H 6200 5142 50  0000 C CNN
+F 1 "AP2127K-ADJ" H 6200 5051 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 6200 5125 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 6200 4900 50  0001 C CNN
+F 4 "C96343" H 6200 4800 50  0001 C CNN "LCSC"
+	1    6200 4800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3800 3350 3800 3600
-$Comp
-L pkl_device:pkl_R_Small R12
-U 1 1 6022EF30
-P 7050 4100
-F 0 "R12" H 6991 4054 50  0000 R CNN
-F 1 "2K0" H 6991 4145 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 6980 4100 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF3301T5E_C22978.pdf" V 7050 4100 50  0001 C CNN
-F 4 "C22975" V 7050 4100 50  0001 C CNN "LCSC"
-	1    7050 4100
-	-1   0    0    1   
-$EndComp
-$Comp
-L pkl_device:pkl_R_Small R14
-U 1 1 602368D9
-P 7350 4100
-F 0 "R14" H 7291 4054 50  0000 R CNN
-F 1 "4K7" H 7291 4145 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 7280 4100 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF4701T5E_C23162.pdf" V 7350 4100 50  0001 C CNN
-F 4 "C23162" V 7350 4100 50  0001 C CNN "LCSC"
-	1    7350 4100
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	7350 4300 7350 4200
-Wire Wire Line
-	6600 4300 7350 4300
-$Comp
-L power:GND #PWR0106
-U 1 1 60246DD9
-P 6100 4600
-F 0 "#PWR0106" H 6100 4350 50  0001 C CNN
-F 1 "GND" H 6105 4427 50  0000 C CNN
-F 2 "" H 6100 4600 50  0001 C CNN
-F 3 "" H 6100 4600 50  0001 C CNN
-	1    6100 4600
-	1    0    0    -1  
-$EndComp
-Connection ~ 6100 4600
 Wire Wire Line
 	3800 5000 3800 5250
 Wire Wire Line
-	5000 3800 4900 3800
+	5900 4700 5800 4700
 Wire Wire Line
-	4900 3800 4900 3700
+	5800 4700 5800 4600
 $Comp
 L power:+3V3 #PWR0107
 U 1 1 602A0966
-P 4900 3700
-F 0 "#PWR0107" H 4900 3550 50  0001 C CNN
-F 1 "+3V3" H 4915 3873 50  0000 C CNN
-F 2 "" H 4900 3700 50  0001 C CNN
-F 3 "" H 4900 3700 50  0001 C CNN
-	1    4900 3700
+P 5800 4600
+F 0 "#PWR0107" H 5800 4450 50  0001 C CNN
+F 1 "+3V3" H 5815 4773 50  0000 C CNN
+F 2 "" H 5800 4600 50  0001 C CNN
+F 3 "" H 5800 4600 50  0001 C CNN
+	1    5800 4600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5600 3800 5650 3800
-Wire Wire Line
-	6100 3350 3800 3350
-Wire Wire Line
-	6600 4400 7650 4400
+	6500 4700 6550 4700
 $Comp
-L pkl_device:pkl_R_Small R18
-U 1 1 602C0CC7
-P 7950 4100
-F 0 "R18" H 7891 4054 50  0000 R CNN
-F 1 "10K" H 7891 4145 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 7880 4100 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1202T5E_C22790.pdf" V 7950 4100 50  0001 C CNN
-F 4 "C25804" V 7950 4100 50  0001 C CNN "LCSC"
-	1    7950 4100
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	7950 4500 7950 4200
-Wire Wire Line
-	6600 4500 7950 4500
-$Comp
-L pkl_device:pkl_R_Small R20
+L pkl_device:pkl_R_Small R11
 U 1 1 602CE1E4
-P 8200 4100
-F 0 "R20" H 8141 4054 50  0000 R CNN
-F 1 "20K" H 8141 4145 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 8130 4100 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF2002T5E_C4184.pdf" V 8200 4100 50  0001 C CNN
-F 4 "C4184" V 8200 4100 50  0001 C CNN "LCSC"
-	1    8200 4100
+P 7550 4950
+F 0 "R11" H 7491 4904 50  0000 R CNN
+F 1 "20K" H 7491 4995 50  0000 R CNN
+F 2 "pkl_dipol:R_0603" V 7480 4950 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF2002T5E_C4184.pdf" V 7550 4950 50  0001 C CNN
+F 4 "C4184" V 7550 4950 50  0001 C CNN "LCSC"
+	1    7550 4950
 	-1   0    0    1   
 $EndComp
+Text Label 7000 4250 0    50   ~ 0
+1.2V
 Wire Wire Line
-	8200 4200 8200 4600
+	7000 4250 7000 4700
 Wire Wire Line
-	6600 4600 8200 4600
-Text Label 6100 3350 0    50   ~ 0
-VIO_USB
-Connection ~ 7950 3700
+	7550 4450 7550 4250
 Wire Wire Line
-	7950 3700 8200 3700
-Connection ~ 7650 3700
+	7550 4250 7000 4250
 Wire Wire Line
-	7650 3700 7950 3700
-Connection ~ 7350 3700
+	6500 4800 7550 4800
 Wire Wire Line
-	7350 3700 7650 3700
-Wire Wire Line
-	7050 3700 7350 3700
-Wire Wire Line
-	6100 3350 6100 3800
-Wire Wire Line
-	6650 3550 6650 3350
-Wire Wire Line
-	6650 3350 6100 3350
-Wire Wire Line
-	5600 3900 6650 3900
-Connection ~ 6100 3350
-Wire Wire Line
-	6650 3750 6650 3900
-Wire Wire Line
-	7050 3700 7050 3800
-Wire Wire Line
-	7350 3700 7350 3800
-Wire Wire Line
-	7650 3700 7650 3800
-Wire Wire Line
-	7950 3700 7950 3800
-Wire Wire Line
-	8200 3700 8200 3800
+	7550 4650 7550 4800
 $Comp
 L power:GND #PWR0108
 U 1 1 603B00E0
-P 5300 4300
-F 0 "#PWR0108" H 5300 4050 50  0001 C CNN
-F 1 "GND" H 5305 4127 50  0000 C CNN
-F 2 "" H 5300 4300 50  0001 C CNN
-F 3 "" H 5300 4300 50  0001 C CNN
-	1    5300 4300
+P 6200 5200
+F 0 "#PWR0108" H 6200 4950 50  0001 C CNN
+F 1 "GND" H 6205 5027 50  0000 C CNN
+F 2 "" H 6200 5200 50  0001 C CNN
+F 3 "" H 6200 5200 50  0001 C CNN
+	1    6200 5200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5300 4200 5300 4300
-Text Label 6650 6250 0    50   ~ 0
-1V2_SBU
-Text Label 6650 6150 0    50   ~ 0
-1V5_SBU
-Text Label 6650 6050 0    50   ~ 0
-1V8_SBU
-Text Label 6650 5950 0    50   ~ 0
-2V5_SBU
-Wire Wire Line
-	6100 6150 6100 6250
-Connection ~ 6100 6150
-Wire Wire Line
-	6100 6050 6100 6150
-Connection ~ 6100 6050
-Wire Wire Line
-	6100 5950 6100 6050
-Connection ~ 6100 5950
-Wire Wire Line
-	6100 5850 6100 5950
-$Comp
-L Connector_Generic:Conn_02x05_Odd_Even J5
-U 1 1 603B75A2
-P 6300 6050
-F 0 "J5" H 6350 6467 50  0000 C CNN
-F 1 "Conn_02x05_Odd_Even" H 6350 6376 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 6300 6050 50  0001 C CNN
-F 3 "~" H 6300 6050 50  0001 C CNN
-	1    6300 6050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6600 5850 7050 5850
-Text Label 6650 5850 0    50   ~ 0
-3V3_SBU
-$Comp
-L Regulator_Linear:AP2127K-ADJ U8
-U 1 1 603B75AE
-P 5300 5550
-F 0 "U8" H 5300 5892 50  0000 C CNN
-F 1 "AP2127K-ADJ" H 5300 5801 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 5300 5875 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 5300 5650 50  0001 C CNN
-F 4 "C96343" H 5300 5550 50  0001 C CNN "LCSC"
-	1    5300 5550
-	1    0    0    -1  
-$EndComp
-$Comp
-L pkl_device:pkl_R_Small R23
-U 1 1 603B75C4
-P 7350 5750
-F 0 "R23" H 7291 5704 50  0000 R CNN
-F 1 "4K7" H 7291 5795 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 7280 5750 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF4701T5E_C23162.pdf" V 7350 5750 50  0001 C CNN
-F 4 "C23162" V 7350 5750 50  0001 C CNN "LCSC"
-	1    7350 5750
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	7350 5950 7350 5850
-Wire Wire Line
-	6600 5950 7350 5950
-$Comp
-L power:GND #PWR0109
-U 1 1 603B75D0
-P 6100 6250
-F 0 "#PWR0109" H 6100 6000 50  0001 C CNN
-F 1 "GND" H 6105 6077 50  0000 C CNN
-F 2 "" H 6100 6250 50  0001 C CNN
-F 3 "" H 6100 6250 50  0001 C CNN
-	1    6100 6250
-	1    0    0    -1  
-$EndComp
-Connection ~ 6100 6250
-Wire Wire Line
-	5000 5450 4900 5450
-Wire Wire Line
-	4900 5450 4900 5350
-$Comp
-L power:+3V3 #PWR0110
-U 1 1 603B75DD
-P 4900 5350
-F 0 "#PWR0110" H 4900 5200 50  0001 C CNN
-F 1 "+3V3" H 4915 5523 50  0000 C CNN
-F 2 "" H 4900 5350 50  0001 C CNN
-F 3 "" H 4900 5350 50  0001 C CNN
-	1    4900 5350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4900 5450 4900 5550
-Wire Wire Line
-	4900 5550 5000 5550
-Connection ~ 4900 5450
-Wire Wire Line
-	5600 5450 5650 5450
-Wire Wire Line
-	6100 5000 3800 5000
-$Comp
-L pkl_device:pkl_R_Small R25
-U 1 1 603B75ED
-P 7650 5750
-F 0 "R25" H 7591 5704 50  0000 R CNN
-F 1 "6K8" H 7591 5795 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 7580 5750 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF6801T5E_C23212.pdf" V 7650 5750 50  0001 C CNN
-F 4 "C23212" V 7650 5750 50  0001 C CNN "LCSC"
-	1    7650 5750
-	-1   0    0    1   
-$EndComp
-$Comp
-L pkl_device:pkl_R_Small R26
-U 1 1 603B75F8
-P 7650 5550
-F 0 "R26" H 7591 5504 50  0000 R CNN
-F 1 "1K2" H 7591 5595 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 7580 5550 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1201T5E_C22765.pdf" V 7650 5550 50  0001 C CNN
-F 4 "C22765" V 7650 5550 50  0001 C CNN "LCSC"
-	1    7650 5550
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6600 6050 7650 6050
-$Comp
-L pkl_device:pkl_R_Small R27
-U 1 1 603B7604
-P 7950 5750
-F 0 "R27" H 7891 5704 50  0000 R CNN
-F 1 "10K" H 7891 5795 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 7880 5750 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1202T5E_C22790.pdf" V 7950 5750 50  0001 C CNN
-F 4 "C25804" V 7950 5750 50  0001 C CNN "LCSC"
-	1    7950 5750
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	7950 6150 7950 5850
-Wire Wire Line
-	6600 6150 7950 6150
-$Comp
-L pkl_device:pkl_R_Small R29
-U 1 1 603B7611
-P 8200 5750
-F 0 "R29" H 8141 5704 50  0000 R CNN
-F 1 "20K" H 8141 5795 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 8130 5750 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF2002T5E_C4184.pdf" V 8200 5750 50  0001 C CNN
-F 4 "C4184" V 8200 5750 50  0001 C CNN "LCSC"
-	1    8200 5750
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	8200 5850 8200 6250
-Wire Wire Line
-	6600 6250 8200 6250
-Connection ~ 7950 5350
-Wire Wire Line
-	7950 5350 8200 5350
-Connection ~ 7650 5350
-Wire Wire Line
-	7650 5350 7950 5350
-Connection ~ 7350 5350
-Wire Wire Line
-	7350 5350 7650 5350
-Wire Wire Line
-	7050 5350 7350 5350
-$Comp
-L pkl_device:pkl_R_Small R10
-U 1 1 603B7627
-P 6650 5300
-F 0 "R10" H 6591 5254 50  0000 R CNN
-F 1 "10k" H 6591 5345 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 6580 5300 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1002T5E_C25804.pdf" V 6650 5300 50  0001 C CNN
-F 4 "C25804" V 6650 5300 50  0001 C CNN "LCSC"
-	1    6650 5300
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6100 5000 6100 5450
-Wire Wire Line
-	6650 5200 6650 5000
-Wire Wire Line
-	6650 5000 6100 5000
-Wire Wire Line
-	5600 5550 6650 5550
-Connection ~ 6100 5000
-Wire Wire Line
-	6650 5400 6650 5550
-Wire Wire Line
-	7050 5350 7050 5450
-Wire Wire Line
-	7350 5350 7350 5450
-Wire Wire Line
-	7650 5350 7650 5450
-Wire Wire Line
-	8200 5350 8200 5450
-$Comp
-L power:GND #PWR0111
-U 1 1 603B763E
-P 5300 5950
-F 0 "#PWR0111" H 5300 5700 50  0001 C CNN
-F 1 "GND" H 5305 5777 50  0000 C CNN
-F 2 "" H 5300 5950 50  0001 C CNN
-F 3 "" H 5300 5950 50  0001 C CNN
-	1    5300 5950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5300 5850 5300 5950
+	6200 5100 6200 5200
 Wire Wire Line
 	1850 3350 3800 3350
 Wire Wire Line
@@ -1053,51 +722,49 @@ F 3 "" H 3600 5250 50  0001 C CNN
 	1    3600 5250
 	1    0    0    -1  
 $EndComp
-Text Label 6100 5000 0    50   ~ 0
-VIO_SBU
 $Comp
 L pkl_device:pkl_R_Small R9
 U 1 1 60355A51
-P 6650 3650
-F 0 "R9" H 6591 3604 50  0000 R CNN
-F 1 "10k" H 6591 3695 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 6580 3650 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1002T5E_C25804.pdf" V 6650 3650 50  0001 C CNN
-F 4 "C25804" V 6650 3650 50  0001 C CNN "LCSC"
-	1    6650 3650
+P 7550 4550
+F 0 "R9" H 7491 4504 50  0000 R CNN
+F 1 "10k" H 7491 4595 50  0000 R CNN
+F 2 "pkl_dipol:R_0603" V 7480 4550 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1002T5E_C25804.pdf" V 7550 4550 50  0001 C CNN
+F 4 "C25804" V 7550 4550 50  0001 C CNN "LCSC"
+	1    7550 4550
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	9400 2500 9500 2500
+	8850 2500 8950 2500
 Wire Wire Line
-	9400 2200 9400 2100
+	8850 2200 8850 2100
 Wire Wire Line
-	9400 2100 9550 2100
-Connection ~ 9400 2100
+	8850 2100 9000 2100
+Connection ~ 8850 2100
 Wire Wire Line
-	9400 2000 9400 1900
+	8850 2000 8850 1900
 Wire Wire Line
-	9400 1900 9550 1900
-Connection ~ 9400 1900
+	8850 1900 9000 1900
+Connection ~ 8850 1900
 Wire Wire Line
-	9400 1700 9500 1700
+	8850 1700 8950 1700
 Wire Wire Line
-	9400 1600 9500 1600
+	8850 1600 8950 1600
 Wire Wire Line
-	8800 2900 8800 3000
+	8250 2900 8250 3000
 $Comp
 L power:GND #PWR010
 U 1 1 6032ABD7
-P 8500 3000
-F 0 "#PWR010" H 8500 2750 50  0001 C CNN
-F 1 "GND" H 8505 2827 50  0000 C CNN
-F 2 "" H 8500 3000 50  0001 C CNN
-F 3 "" H 8500 3000 50  0001 C CNN
-	1    8500 3000
+P 7950 3000
+F 0 "#PWR010" H 7950 2750 50  0001 C CNN
+F 1 "GND" H 7955 2827 50  0000 C CNN
+F 2 "" H 7950 3000 50  0001 C CNN
+F 3 "" H 7950 3000 50  0001 C CNN
+	1    7950 3000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8500 2900 8500 3000
+	7950 2900 7950 3000
 $Comp
 L pkl_device:pkl_R R2
 U 1 1 60275996
@@ -1170,10 +837,10 @@ F 4 "C131978" H 3700 4750 50  0001 C CNN "LCSC"
 	1    0    0    -1  
 $EndComp
 $Comp
-L pkl_device:pkl_R R5
+L pkl_device:pkl_R R7
 U 1 1 6043AF76
 P 4900 2450
-F 0 "R5" H 4970 2496 50  0000 L CNN
+F 0 "R7" H 4970 2496 50  0000 L CNN
 F 1 "2K2" H 4970 2405 50  0000 L CNN
 F 2 "pkl_dipol:R_0603" V 4830 2450 30  0001 C CNN
 F 3 "" H 4900 2450 30  0000 C CNN
@@ -1182,10 +849,10 @@ F 4 "C4190" H 4900 2450 50  0001 C CNN "LCSC"
 	1    0    0    -1  
 $EndComp
 $Comp
-L pkl_device:pkl_R R6
+L pkl_device:pkl_R R8
 U 1 1 6043B319
 P 5200 2450
-F 0 "R6" H 5270 2496 50  0000 L CNN
+F 0 "R8" H 5270 2496 50  0000 L CNN
 F 1 "2K2" H 5270 2405 50  0000 L CNN
 F 2 "pkl_dipol:R_0603" V 5130 2450 30  0001 C CNN
 F 3 "" H 5200 2450 30  0000 C CNN
@@ -1199,166 +866,10 @@ Text Label 5200 2650 0    50   ~ 0
 A7
 Text Label 4900 2650 0    50   ~ 0
 A6
-Wire Wire Line
-	7650 4400 7650 4200
-$Comp
-L pkl_device:pkl_R_Small R13
-U 1 1 604A5AD7
-P 7350 3900
-F 0 "R13" H 7291 3854 50  0000 R CNN
-F 1 "0R" H 7291 3945 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 7280 3900 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1201T5E_C22765.pdf" V 7350 3900 50  0001 C CNN
-F 4 "C21189" V 7350 3900 50  0001 C CNN "LCSC"
-	1    7350 3900
-	-1   0    0    1   
-$EndComp
-$Comp
-L pkl_device:pkl_R_Small R17
-U 1 1 604A5E58
-P 7950 3900
-F 0 "R17" H 7891 3854 50  0000 R CNN
-F 1 "1K5" H 7891 3945 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 7880 3900 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1201T5E_C22765.pdf" V 7950 3900 50  0001 C CNN
-F 4 "C22843" V 7950 3900 50  0001 C CNN "LCSC"
-	1    7950 3900
-	-1   0    0    1   
-$EndComp
-$Comp
-L pkl_device:pkl_R_Small R19
-U 1 1 604A63C7
-P 8200 3900
-F 0 "R19" H 8141 3854 50  0000 R CNN
-F 1 "0R" H 8141 3945 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 8130 3900 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1201T5E_C22765.pdf" V 8200 3900 50  0001 C CNN
-F 4 "C21189" V 8200 3900 50  0001 C CNN "LCSC"
-	1    8200 3900
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6650 3900 6900 3900
-Wire Wire Line
-	6900 3900 6900 3700
-Wire Wire Line
-	6900 3700 7050 3700
-Connection ~ 6650 3900
-Connection ~ 7050 3700
-Wire Wire Line
-	7650 6050 7650 5850
-$Comp
-L pkl_device:pkl_R_Small R24
-U 1 1 604D25D3
-P 7350 5550
-F 0 "R24" H 7291 5504 50  0000 R CNN
-F 1 "0R" H 7291 5595 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 7280 5550 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1201T5E_C22765.pdf" V 7350 5550 50  0001 C CNN
-F 4 "C21189" V 7350 5550 50  0001 C CNN "LCSC"
-	1    7350 5550
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	7950 5350 7950 5450
-$Comp
-L pkl_device:pkl_R_Small R28
-U 1 1 604D3A88
-P 7950 5550
-F 0 "R28" H 7891 5504 50  0000 R CNN
-F 1 "1K5" H 7891 5595 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 7880 5550 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1201T5E_C22765.pdf" V 7950 5550 50  0001 C CNN
-F 4 "C22843" V 7950 5550 50  0001 C CNN "LCSC"
-	1    7950 5550
-	-1   0    0    1   
-$EndComp
-$Comp
-L pkl_device:pkl_R_Small R30
-U 1 1 604D405B
-P 8200 5550
-F 0 "R30" H 8141 5504 50  0000 R CNN
-F 1 "0R" H 8141 5595 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 8130 5550 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1201T5E_C22765.pdf" V 8200 5550 50  0001 C CNN
-F 4 "C21189" V 8200 5550 50  0001 C CNN "LCSC"
-	1    8200 5550
-	-1   0    0    1   
-$EndComp
-Text Label 6100 3900 0    50   ~ 0
+Text Label 7000 4800 0    50   ~ 0
 ADJ_USB
-Wire Wire Line
-	6650 5550 6900 5550
-Wire Wire Line
-	6900 5550 6900 5350
-Wire Wire Line
-	6900 5350 7050 5350
-Connection ~ 6650 5550
-Connection ~ 7050 5350
-Text Label 6100 5550 0    50   ~ 0
-ADJ_SBU
 NoConn ~ 5200 2250
 NoConn ~ 4900 2250
-$Comp
-L pkl_device:pkl_R_Small R15
-U 1 1 602B3AC3
-P 7650 3900
-F 0 "R15" H 7591 3854 50  0000 R CNN
-F 1 "1K2" H 7591 3945 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 7580 3900 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1201T5E_C22765.pdf" V 7650 3900 50  0001 C CNN
-F 4 "C22765" V 7650 3900 50  0001 C CNN "LCSC"
-	1    7650 3900
-	-1   0    0    1   
-$EndComp
-$Comp
-L pkl_device:pkl_R_Small R16
-U 1 1 602B2C48
-P 7650 4100
-F 0 "R16" H 7591 4054 50  0000 R CNN
-F 1 "6K8" H 7591 4145 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 7580 4100 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF6801T5E_C23212.pdf" V 7650 4100 50  0001 C CNN
-F 4 "C23212" V 7650 4100 50  0001 C CNN "LCSC"
-	1    7650 4100
-	-1   0    0    1   
-$EndComp
-$Comp
-L pkl_device:pkl_R_Small R11
-U 1 1 607B77B9
-P 7050 3900
-F 0 "R11" H 6991 3854 50  0000 R CNN
-F 1 "1K2" H 6991 3945 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 6980 3900 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1201T5E_C22765.pdf" V 7050 3900 50  0001 C CNN
-F 4 "C22765" V 7050 3900 50  0001 C CNN "LCSC"
-	1    7050 3900
-	-1   0    0    1   
-$EndComp
-$Comp
-L pkl_device:pkl_R_Small R22
-U 1 1 607C9C20
-P 7050 5550
-F 0 "R22" H 6991 5504 50  0000 R CNN
-F 1 "1K2" H 6991 5595 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 6980 5550 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1201T5E_C22765.pdf" V 7050 5550 50  0001 C CNN
-F 4 "C22765" V 7050 5550 50  0001 C CNN "LCSC"
-	1    7050 5550
-	-1   0    0    1   
-$EndComp
-$Comp
-L pkl_device:pkl_R_Small R21
-U 1 1 607CA05D
-P 7050 5750
-F 0 "R21" H 6991 5704 50  0000 R CNN
-F 1 "2K0" H 6991 5795 50  0000 R CNN
-F 2 "pkl_dipol:R_0603" V 6980 5750 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF3301T5E_C22978.pdf" V 7050 5750 50  0001 C CNN
-F 4 "C22975" V 7050 5750 50  0001 C CNN "LCSC"
-	1    7050 5750
-	-1   0    0    1   
-$EndComp
 $Comp
 L Mechanical:MountingHole MK?
 U 1 1 60844514
@@ -1412,10 +923,10 @@ F 3 "" H 2950 1650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L pkl_device:pkl_R R7
+L pkl_device:pkl_R R4
 U 1 1 6042FE6E
 P 9000 4300
-F 0 "R7" H 8930 4254 50  0000 R CNN
+F 0 "R4" H 8930 4254 50  0000 R CNN
 F 1 "1K" H 8930 4345 50  0000 R CNN
 F 2 "pkl_dipol:R_0603" V 8930 4300 30  0001 C CNN
 F 3 "" H 9000 4300 30  0000 C CNN
@@ -1450,23 +961,23 @@ $EndComp
 $Comp
 L Mechanical:Fiducial FID1
 U 1 1 60458FC3
-P 10500 6250
-F 0 "FID1" H 10585 6296 50  0000 L CNN
-F 1 "Fiducial" H 10585 6205 50  0000 L CNN
-F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 10500 6250 50  0001 C CNN
-F 3 "~" H 10500 6250 50  0001 C CNN
-	1    10500 6250
+P 10300 6350
+F 0 "FID1" H 10385 6396 50  0000 L CNN
+F 1 "Fiducial" H 10385 6305 50  0000 L CNN
+F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 10300 6350 50  0001 C CNN
+F 3 "~" H 10300 6350 50  0001 C CNN
+	1    10300 6350
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:Fiducial FID2
 U 1 1 60459D25
-P 10500 6400
-F 0 "FID2" H 10585 6446 50  0000 L CNN
-F 1 "Fiducial" H 10585 6355 50  0000 L CNN
-F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 10500 6400 50  0001 C CNN
-F 3 "~" H 10500 6400 50  0001 C CNN
-	1    10500 6400
+P 10800 6350
+F 0 "FID2" H 10885 6396 50  0000 L CNN
+F 1 "Fiducial" H 10885 6305 50  0000 L CNN
+F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 10800 6350 50  0001 C CNN
+F 3 "~" H 10800 6350 50  0001 C CNN
+	1    10800 6350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1481,58 +992,39 @@ F 3 "~" H 10600 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 4200 5300 4200
+	5800 5100 6200 5100
 Wire Wire Line
-	4900 4150 4900 4200
+	5800 5050 5800 5100
 $Comp
 L Device:C_Small C5
 U 1 1 60266DA0
-P 4900 4050
-F 0 "C5" H 4808 4004 50  0000 R CNN
-F 1 "1uF" H 4808 4095 50  0000 R CNN
-F 2 "pkl_dipol:C_0603" H 4900 4050 50  0001 C CNN
-F 3 "~" H 4900 4050 50  0001 C CNN
-F 4 "C15849" H 4900 4050 50  0001 C CNN "LCSC"
-	1    4900 4050
+P 5800 4950
+F 0 "C5" H 5708 4904 50  0000 R CNN
+F 1 "1uF" H 5708 4995 50  0000 R CNN
+F 2 "pkl_dipol:C_0603" H 5800 4950 50  0001 C CNN
+F 3 "~" H 5800 4950 50  0001 C CNN
+F 4 "C15849" H 5800 4950 50  0001 C CNN "LCSC"
+	1    5800 4950
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	4900 3950 4900 3900
-Connection ~ 4900 3800
+	5800 4850 5800 4800
+Connection ~ 5800 4700
 Wire Wire Line
-	5000 3900 4900 3900
-Connection ~ 4900 3900
+	5900 4800 5800 4800
+Connection ~ 5800 4800
 Wire Wire Line
-	4900 3900 4900 3800
+	5800 4800 5800 4700
+Connection ~ 6200 5100
 Wire Wire Line
-	4900 5800 4900 5850
+	6200 5100 6550 5100
 Wire Wire Line
-	4900 5850 5300 5850
+	6550 5100 6550 5050
 Wire Wire Line
-	4900 5600 4900 5550
-Connection ~ 4900 5550
-Connection ~ 5300 5850
-Connection ~ 5300 4200
-Connection ~ 3800 3350
-Connection ~ 3800 5000
+	6550 4850 6550 4700
+Connection ~ 6550 4700
 Wire Wire Line
-	5300 4200 5650 4200
-Wire Wire Line
-	5650 4200 5650 4150
-Wire Wire Line
-	5650 3950 5650 3800
-Connection ~ 5650 3800
-Wire Wire Line
-	5650 3800 6100 3800
-Wire Wire Line
-	5300 5850 5650 5850
-Wire Wire Line
-	5650 5850 5650 5800
-Wire Wire Line
-	5650 5600 5650 5450
-Connection ~ 5650 5450
-Wire Wire Line
-	5650 5450 6100 5450
+	6550 4700 7000 4700
 $Comp
 L Device:C_Small C1
 U 1 1 60351ADF
@@ -1614,37 +1106,13 @@ Wire Wire Line
 $Comp
 L Device:C_Small C7
 U 1 1 603EE93B
-P 5650 4050
-F 0 "C7" H 5742 4096 50  0000 L CNN
-F 1 "1uF" H 5742 4005 50  0000 L CNN
-F 2 "pkl_dipol:C_0603" H 5650 4050 50  0001 C CNN
-F 3 "~" H 5650 4050 50  0001 C CNN
-F 4 "C15849" H 5650 4050 50  0001 C CNN "LCSC"
-	1    5650 4050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C6
-U 1 1 603EEEDE
-P 4900 5700
-F 0 "C6" H 4808 5654 50  0000 R CNN
-F 1 "1uF" H 4808 5745 50  0000 R CNN
-F 2 "pkl_dipol:C_0603" H 4900 5700 50  0001 C CNN
-F 3 "~" H 4900 5700 50  0001 C CNN
-F 4 "C15849" H 4900 5700 50  0001 C CNN "LCSC"
-	1    4900 5700
-	1    0    0    1   
-$EndComp
-$Comp
-L Device:C_Small C8
-U 1 1 603EF463
-P 5650 5700
-F 0 "C8" H 5742 5746 50  0000 L CNN
-F 1 "1uF" H 5742 5655 50  0000 L CNN
-F 2 "pkl_dipol:C_0603" H 5650 5700 50  0001 C CNN
-F 3 "~" H 5650 5700 50  0001 C CNN
-F 4 "C15849" H 5650 5700 50  0001 C CNN "LCSC"
-	1    5650 5700
+P 6550 4950
+F 0 "C7" H 6642 4996 50  0000 L CNN
+F 1 "1uF" H 6642 4905 50  0000 L CNN
+F 2 "pkl_dipol:C_0603" H 6550 4950 50  0001 C CNN
+F 3 "~" H 6550 4950 50  0001 C CNN
+F 4 "C15849" H 6550 4950 50  0001 C CNN "LCSC"
+	1    6550 4950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1794,10 +1262,10 @@ USBP_DIR
 Text Label 2100 1650 0    50   ~ 0
 USBN_DIR
 $Comp
-L pkl_device:pkl_R_Small R32
+L pkl_device:pkl_R_Small R13
 U 1 1 60329F79
 P 900 2600
-F 0 "R32" H 841 2554 50  0000 R CNN
+F 0 "R13" H 841 2554 50  0000 R CNN
 F 1 "20K" H 841 2645 50  0000 R CNN
 F 2 "pkl_dipol:R_0603" V 830 2600 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF2002T5E_C4184.pdf" V 900 2600 50  0001 C CNN
@@ -1913,10 +1381,10 @@ A6
 Text Label 3350 2350 2    50   ~ 0
 A7
 $Comp
-L pkl_device:pkl_R R4
+L pkl_device:pkl_R R6
 U 1 1 60375397
 P 4600 2450
-F 0 "R4" H 4670 2496 50  0000 L CNN
+F 0 "R6" H 4670 2496 50  0000 L CNN
 F 1 "2K2" H 4670 2405 50  0000 L CNN
 F 2 "pkl_dipol:R_0603" V 4530 2450 30  0001 C CNN
 F 3 "" H 4600 2450 30  0000 C CNN
@@ -1927,38 +1395,189 @@ $EndComp
 Text Label 4600 2650 0    50   ~ 0
 A5
 NoConn ~ 4600 2250
+Wire Wire Line
+	6550 5100 7550 5100
+Wire Wire Line
+	7550 5100 7550 5050
+Connection ~ 6550 5100
+Wire Wire Line
+	7550 4850 7550 4800
+Connection ~ 7550 4800
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J8
-U 1 1 6044B9D2
-P 2900 7000
-F 0 "J8" H 2950 7317 50  0000 C CNN
-F 1 "SPARE" H 2950 7226 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 2900 7000 50  0001 C CNN
-F 3 "~" H 2900 7000 50  0001 C CNN
-	1    2900 7000
+L Mechanical:MountingHole TH?
+U 1 1 6042AAA9
+P 11000 6050
+AR Path="/60819140/6042AAA9" Ref="TH?"  Part="1" 
+AR Path="/6042AAA9" Ref="TH4"  Part="1" 
+F 0 "TH4" H 10950 6250 50  0000 L CNN
+F 1 "Mounting_Hole" H 11100 6010 50  0001 L CNN
+F 2 "pkl_pads:ToolingHole" H 11000 6050 50  0001 C CNN
+F 3 "" H 11000 6050 50  0001 C CNN
+	1    11000 6050
 	1    0    0    -1  
 $EndComp
-NoConn ~ 2700 6900
-NoConn ~ 2700 7000
-NoConn ~ 2700 7100
-NoConn ~ 3200 7100
-NoConn ~ 3200 7000
-NoConn ~ 3200 6900
+Text Label 10650 1600 0    50   ~ 0
+CC1
+Text Label 10650 1700 0    50   ~ 0
+CC2
+Text Label 10700 1900 0    50   ~ 0
+USBN
+Text Label 10700 2100 0    50   ~ 0
+USBP
+Text Label 10650 2500 0    50   ~ 0
+SBU1
+Text Label 10650 2600 0    50   ~ 0
+SBU2
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J9
-U 1 1 604B3D80
-P 4400 7000
-F 0 "J9" H 4450 7317 50  0000 C CNN
-F 1 "SPARE" H 4450 7226 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 4400 7000 50  0001 C CNN
-F 3 "~" H 4400 7000 50  0001 C CNN
-	1    4400 7000
+L Connector:USB_C_Receptacle_USB2.0 J4
+U 1 1 6044CF9E
+P 9950 2000
+F 0 "J4" H 9925 2887 60  0000 C CNN
+F 1 "USB_TYPE_C" H 9925 2781 60  0000 C CNN
+F 2 "pkl_connectors:USB_C_Receptacle_HRO_TYPE-C-31-M-12" H 10000 700 60  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 9950 2000 60  0001 C CNN
+F 4 "C165948" H 9950 600 50  0001 C CNN "LCSC"
+	1    9950 2000
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4200 6900
-NoConn ~ 4200 7000
-NoConn ~ 4200 7100
-NoConn ~ 4700 7100
-NoConn ~ 4700 7000
-NoConn ~ 4700 6900
+Wire Wire Line
+	10550 1400 10650 1400
+$Comp
+L power:GND #PWR026
+U 1 1 6044CFA9
+P 9950 3000
+F 0 "#PWR026" H 9950 2750 50  0001 C CNN
+F 1 "GND" H 9955 2827 50  0000 C CNN
+F 2 "" H 9950 3000 50  0001 C CNN
+F 3 "" H 9950 3000 50  0001 C CNN
+	1    9950 3000
+	1    0    0    -1  
+$EndComp
+Text Label 10650 1400 0    50   ~ 0
+VBUS
+Wire Wire Line
+	10550 2600 10650 2600
+Wire Wire Line
+	10550 2500 10650 2500
+Wire Wire Line
+	10550 2200 10550 2100
+Wire Wire Line
+	10550 2100 10700 2100
+Connection ~ 10550 2100
+Wire Wire Line
+	10550 2000 10550 1900
+Wire Wire Line
+	10550 1900 10700 1900
+Connection ~ 10550 1900
+Wire Wire Line
+	10550 1700 10650 1700
+Wire Wire Line
+	10550 1600 10650 1600
+Wire Wire Line
+	9950 2900 9950 3000
+$Comp
+L power:GND #PWR023
+U 1 1 6044CFBF
+P 9650 3000
+F 0 "#PWR023" H 9650 2750 50  0001 C CNN
+F 1 "GND" H 9655 2827 50  0000 C CNN
+F 2 "" H 9650 3000 50  0001 C CNN
+F 3 "" H 9650 3000 50  0001 C CNN
+	1    9650 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 2900 9650 3000
+$Comp
+L Connector:Conn_01x03_Male J5
+U 1 1 603A0DF8
+P 2400 4700
+F 0 "J5" H 2508 4981 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 2508 4890 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2400 4700 50  0001 C CNN
+F 3 "~" H 2400 4700 50  0001 C CNN
+	1    2400 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 4700 2700 4700
+Text Label 2700 4700 0    50   ~ 0
+USBN
+Wire Wire Line
+	2600 4600 2700 4600
+Text Label 2700 4600 0    50   ~ 0
+USBN_1V2
+Wire Wire Line
+	2600 4800 2700 4800
+Text Label 2700 4800 0    50   ~ 0
+USBN_3V3
+$Comp
+L Connector:Conn_01x03_Male J11
+U 1 1 603D3E0A
+P 4350 4700
+F 0 "J11" H 4458 4981 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 4458 4890 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4350 4700 50  0001 C CNN
+F 3 "~" H 4350 4700 50  0001 C CNN
+	1    4350 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 4600 4650 4600
+Wire Wire Line
+	4550 4700 4650 4700
+Wire Wire Line
+	4550 4800 4650 4800
+Text Label 4650 4600 0    50   ~ 0
+USBP_1V2
+Text Label 4650 4700 0    50   ~ 0
+USBP
+Text Label 4650 4800 0    50   ~ 0
+USBP_3V3
+$Comp
+L Connector:Conn_01x03_Male J10
+U 1 1 60406259
+P 2400 6350
+F 0 "J10" H 2508 6631 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 2508 6540 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2400 6350 50  0001 C CNN
+F 3 "~" H 2400 6350 50  0001 C CNN
+	1    2400 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 6250 2700 6250
+Wire Wire Line
+	2600 6350 2700 6350
+Wire Wire Line
+	2600 6450 2700 6450
+Text Label 2700 6250 0    50   ~ 0
+SBU2_1V2
+Text Label 2700 6350 0    50   ~ 0
+SBU2
+Text Label 2700 6450 0    50   ~ 0
+SBU2_3V3
+$Comp
+L Connector:Conn_01x03_Male J12
+U 1 1 6042D9EB
+P 4350 6350
+F 0 "J12" H 4458 6631 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 4458 6540 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4350 6350 50  0001 C CNN
+F 3 "~" H 4350 6350 50  0001 C CNN
+	1    4350 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 6250 4650 6250
+Wire Wire Line
+	4550 6350 4650 6350
+Wire Wire Line
+	4550 6450 4650 6450
+Text Label 4650 6250 0    50   ~ 0
+SBU1_1V2
+Text Label 4650 6350 0    50   ~ 0
+SBU1
+Text Label 4650 6450 0    50   ~ 0
+SBU1_3V3
 $EndSCHEMATC
