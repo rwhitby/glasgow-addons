@@ -51,6 +51,13 @@
 
 - Potentially support large extended messages by streaming the FUSB302 FIFO through the FPGA
 
+## Applet Requirements
+
+- Applet should start Port A at 3.3V, and check if FUSB302 is
+  available, before raising voltage to 5V.  This is to prevent the
+  case that plugging in the addon the wrong way around blows up the
+  level shifters.
+
 ## Current Status
 
 ![front](./usb-pd-addon-front.png)
