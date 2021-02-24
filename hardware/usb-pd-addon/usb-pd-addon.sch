@@ -848,45 +848,6 @@ Text Label 7050 5650 0    50   ~ 0
 ADJ_USB
 NoConn ~ 5200 2250
 NoConn ~ 4900 2250
-$Comp
-L Mechanical:MountingHole MK?
-U 1 1 60844514
-P 10400 6050
-AR Path="/60819140/60844514" Ref="MK?"  Part="1" 
-AR Path="/60844514" Ref="TH1"  Part="1" 
-F 0 "TH1" H 10350 6250 50  0000 L CNN
-F 1 "Mounting_Hole" H 10500 6010 50  0001 L CNN
-F 2 "pkl_pads:ToolingHole" H 10400 6050 50  0001 C CNN
-F 3 "" H 10400 6050 50  0001 C CNN
-	1    10400 6050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole MK?
-U 1 1 6084451A
-P 10600 6050
-AR Path="/60819140/6084451A" Ref="MK?"  Part="1" 
-AR Path="/6084451A" Ref="TH2"  Part="1" 
-F 0 "TH2" H 10550 6250 50  0000 L CNN
-F 1 "Mounting_Hole" H 10700 6010 50  0001 L CNN
-F 2 "pkl_pads:ToolingHole" H 10600 6050 50  0001 C CNN
-F 3 "" H 10600 6050 50  0001 C CNN
-	1    10600 6050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole MK?
-U 1 1 60261CA0
-P 10800 6050
-AR Path="/60819140/60261CA0" Ref="MK?"  Part="1" 
-AR Path="/60261CA0" Ref="TH3"  Part="1" 
-F 0 "TH3" H 10750 6250 50  0000 L CNN
-F 1 "Mounting_Hole" H 10900 6010 50  0001 L CNN
-F 2 "pkl_pads:ToolingHole" H 10800 6050 50  0001 C CNN
-F 3 "" H 10800 6050 50  0001 C CNN
-	1    10800 6050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2950 1550 3450 1550
 $Comp
@@ -928,23 +889,23 @@ Wire Wire Line
 $Comp
 L Graphic:Logo_Open_Hardware_Small LOGO1
 U 1 1 6044D04D
-P 10600 5600
-F 0 "LOGO1" H 10600 5875 50  0001 C CNN
-F 1 "Logo_Open_Hardware_Small" H 10600 5375 50  0001 C CNN
-F 2 "Symbol:OSHW-Logo2_7.3x6mm_SilkScreen" H 10600 5600 50  0001 C CNN
-F 3 "~" H 10600 5600 50  0001 C CNN
-	1    10600 5600
+P 6450 7250
+F 0 "LOGO1" H 6450 7525 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 6450 7025 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo2_7.3x6mm_SilkScreen" H 6450 7250 50  0001 C CNN
+F 3 "~" H 6450 7250 50  0001 C CNN
+	1    6450 7250
 	1    0    0    -1  
 $EndComp
 $Comp
 L Graphic:Logo_Open_Hardware_Small LOGO2
 U 1 1 60460712
-P 10600 5600
-F 0 "LOGO2" H 10600 5875 50  0001 C CNN
-F 1 "Logo_Open_Hardware_Small" H 10600 5375 50  0001 C CNN
-F 2 "Symbol:OSHW-Logo2_7.3x6mm_SilkScreen" H 10600 5600 50  0001 C CNN
-F 3 "~" H 10600 5600 50  0001 C CNN
-	1    10600 5600
+P 6450 7250
+F 0 "LOGO2" H 6450 7525 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 6450 7025 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo2_7.3x6mm_SilkScreen" H 6450 7250 50  0001 C CNN
+F 3 "~" H 6450 7250 50  0001 C CNN
+	1    6450 7250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1614,19 +1575,6 @@ F 3 "~" H 10550 1400 50  0001 C CNN
 $EndComp
 Connection ~ 10550 1400
 $Comp
-L Mechanical:MountingHole TH?
-U 1 1 605480D8
-P 11000 6050
-AR Path="/60819140/605480D8" Ref="TH?"  Part="1" 
-AR Path="/605480D8" Ref="TH4"  Part="1" 
-F 0 "TH4" H 10950 6250 50  0000 L CNN
-F 1 "Mounting_Hole" H 11100 6010 50  0001 L CNN
-F 2 "pkl_pads:ToolingHole" H 11000 6050 50  0001 C CNN
-F 3 "" H 11000 6050 50  0001 C CNN
-	1    11000 6050
-	1    0    0    -1  
-$EndComp
-$Comp
 L Jumper:Jumper_2_Open JP1
 U 1 1 6055AB67
 P 2950 1150
@@ -1966,4 +1914,54 @@ F 3 "~" H 7600 2000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8400 4150 8800 4150
+$Comp
+L Device:C_Small C15
+U 1 1 603FA002
+P 6950 3000
+F 0 "C15" H 6858 2954 50  0000 R CNN
+F 1 "200pF" H 6858 3045 50  0000 R CNN
+F 2 "pkl_dipol:C_0603" H 6950 3000 50  0001 C CNN
+F 3 "~" H 6950 3000 50  0001 C CNN
+F 4 "C1600" H 6950 3000 50  0001 C CNN "LCSC"
+	1    6950 3000
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C17
+U 1 1 603FAA97
+P 7350 3000
+F 0 "C17" H 7258 2954 50  0000 R CNN
+F 1 "200pF" H 7258 3045 50  0000 R CNN
+F 2 "pkl_dipol:C_0603" H 7350 3000 50  0001 C CNN
+F 3 "~" H 7350 3000 50  0001 C CNN
+F 4 "C1600" H 7350 3000 50  0001 C CNN "LCSC"
+	1    7350 3000
+	1    0    0    1   
+$EndComp
+Text Label 6950 2900 0    50   ~ 0
+CC1
+Text Label 7350 2900 0    50   ~ 0
+CC2
+$Comp
+L power:GND #PWR035
+U 1 1 603FB2D8
+P 6950 3100
+F 0 "#PWR035" H 6950 2850 50  0001 C CNN
+F 1 "GND" H 6955 2927 50  0000 C CNN
+F 2 "" H 6950 3100 50  0001 C CNN
+F 3 "" H 6950 3100 50  0001 C CNN
+	1    6950 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR036
+U 1 1 603FB771
+P 7350 3100
+F 0 "#PWR036" H 7350 2850 50  0001 C CNN
+F 1 "GND" H 7355 2927 50  0000 C CNN
+F 2 "" H 7350 3100 50  0001 C CNN
+F 3 "" H 7350 3100 50  0001 C CNN
+	1    7350 3100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
