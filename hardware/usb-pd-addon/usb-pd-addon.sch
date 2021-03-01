@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "USB-PD on Glasgow"
 Date ""
-Rev "V0.7a"
+Rev "V0.8a"
 Comp "License: CC-BY-SA 4.0"
 Comment1 "(C) 2020-2021 Piotr Esden-Tempski <piotr@esden.net>"
 Comment2 "(C) 2020-2021 1BitSquared <info@1bitsquared.com>"
@@ -1314,15 +1314,15 @@ F 3 "" H 9650 3000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9650 2900 9650 3000
-Text Label 3400 3550 0    50   ~ 0
+Text Label 5750 3450 2    50   ~ 0
 USBN
 Wire Wire Line
 	6300 4100 6200 4100
 Text Label 5600 4200 2    50   ~ 0
 USBP_3V3
-Text Label 3400 5200 0    50   ~ 0
+Text Label 5750 5100 2    50   ~ 0
 SBU2
-Text Label 6250 5200 0    50   ~ 0
+Text Label 6250 5100 0    50   ~ 0
 SBU1
 Text Label 2850 7250 0    50   ~ 0
 VBUS_OUT
@@ -1842,25 +1842,10 @@ F 3 "" H 4900 4650 50  0001 C CNN
 $EndComp
 Text Label 5950 4450 0    50   ~ 0
 ~USB_1V2
-$Comp
-L Connector_Generic:Conn_01x02 J9
-U 1 1 60407FFB
-P 6050 3550
-F 0 "J9" H 6130 3542 50  0000 L CNN
-F 1 "Conn_01x02" H 6130 3451 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6050 3550 50  0001 C CNN
-F 3 "~" H 6050 3550 50  0001 C CNN
-	1    6050 3550
-	-1   0    0    -1  
-$EndComp
-Text Label 6250 3550 0    50   ~ 0
+Text Label 6250 3450 0    50   ~ 0
 USBP
 Wire Wire Line
-	6250 3650 6300 3650
-Wire Wire Line
-	6300 3650 6300 4100
-Wire Wire Line
-	6250 3550 6450 3550
+	6250 3550 6300 3550
 Wire Wire Line
 	5900 4400 5900 4450
 Wire Wire Line
@@ -1881,22 +1866,20 @@ $EndComp
 Text Label 5950 6100 0    50   ~ 0
 ~SBU_1V2
 $Comp
-L Connector_Generic:Conn_01x02 J11
+L Connector_Generic:Conn_02x02_Odd_Even J11
 U 1 1 6057AA2A
-P 6050 5200
-F 0 "J11" H 6130 5192 50  0000 L CNN
-F 1 "Conn_01x02" H 6130 5101 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6050 5200 50  0001 C CNN
-F 3 "~" H 6050 5200 50  0001 C CNN
-	1    6050 5200
+P 6050 5100
+F 0 "J11" H 6130 5092 50  0000 L CNN
+F 1 "Conn_02x02" H 6130 5001 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 6050 5100 50  0001 C CNN
+F 3 "~" H 6050 5100 50  0001 C CNN
+	1    6050 5100
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	6250 5300 6300 5300
+	6250 5200 6300 5200
 Wire Wire Line
-	6300 5300 6300 5750
-Wire Wire Line
-	6250 5200 6450 5200
+	6250 5100 6450 5100
 Wire Wire Line
 	5900 6050 5900 6100
 Wire Wire Line
@@ -1931,23 +1914,6 @@ F 3 "" H 3050 6300 50  0001 C CNN
 $EndComp
 Text Label 3100 6100 0    50   ~ 0
 ~SBU_1V2
-$Comp
-L Connector_Generic:Conn_01x02 J10
-U 1 1 60649C48
-P 3200 5200
-F 0 "J10" H 3280 5192 50  0000 L CNN
-F 1 "Conn_01x02" H 3280 5101 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3200 5200 50  0001 C CNN
-F 3 "~" H 3200 5200 50  0001 C CNN
-	1    3200 5200
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3400 5300 3450 5300
-Wire Wire Line
-	3450 5300 3450 5750
-Wire Wire Line
-	3400 5200 3600 5200
 Wire Wire Line
 	3050 6050 3050 6100
 $Comp
@@ -1978,23 +1944,6 @@ F 3 "" H 3050 4650 50  0001 C CNN
 $EndComp
 Text Label 3100 4450 0    50   ~ 0
 ~USB_1V2
-$Comp
-L Connector_Generic:Conn_01x02 J5
-U 1 1 606D00CE
-P 3200 3550
-F 0 "J5" H 3280 3542 50  0000 L CNN
-F 1 "Conn_01x02" H 3280 3451 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3200 3550 50  0001 C CNN
-F 3 "~" H 3200 3550 50  0001 C CNN
-	1    3200 3550
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3400 3650 3450 3650
-Wire Wire Line
-	3450 3650 3450 4100
-Wire Wire Line
-	3400 3550 3600 3550
 Wire Wire Line
 	3050 4400 3050 4450
 Text Label 2750 4200 2    50   ~ 0
@@ -2404,4 +2353,33 @@ F 4 "C14663" H 4900 4750 50  0001 C CNN "LCSC"
 	-1   0    0    -1  
 $EndComp
 Connection ~ 4900 4650
+Wire Wire Line
+	6300 3550 6300 4100
+Wire Wire Line
+	5750 3450 5500 3450
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J9
+U 1 1 60407FFB
+P 6050 3450
+F 0 "J9" H 6130 3442 50  0000 L CNN
+F 1 "Conn_02x02" H 6130 3351 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 6050 3450 50  0001 C CNN
+F 3 "~" H 6050 3450 50  0001 C CNN
+	1    6050 3450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3450 6450 3450
+Wire Wire Line
+	3450 3550 5750 3550
+Wire Wire Line
+	3450 3550 3450 4100
+Wire Wire Line
+	6300 5200 6300 5750
+Wire Wire Line
+	5750 5100 5550 5100
+Wire Wire Line
+	3450 5200 5750 5200
+Wire Wire Line
+	3450 5200 3450 5750
 $EndSCHEMATC
