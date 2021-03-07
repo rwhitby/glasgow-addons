@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "USB-PD on Glasgow"
 Date ""
-Rev "V0.8b"
+Rev "V0.8c"
 Comp "License: CC-BY-SA 4.0"
 Comment1 "(C) 2020-2021 Piotr Esden-Tempski <piotr@esden.net>"
 Comment2 "(C) 2020-2021 1BitSquared <info@1bitsquared.com>"
@@ -2403,4 +2403,16 @@ Connection ~ 1800 4900
 Connection ~ 4650 4900
 Connection ~ 1800 7250
 Connection ~ 4650 7250
+$Comp
+L Connector:TestPoint TP4
+U 1 1 604A12CC
+P 7750 5350
+F 0 "TP4" H 7808 5468 50  0000 L CNN
+F 1 "TestPoint" H 7808 5377 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm" H 7950 5350 50  0001 C CNN
+F 3 "~" H 7950 5350 50  0001 C CNN
+	1    7750 5350
+	1    0    0    -1  
+$EndComp
+Connection ~ 7750 5350
 $EndSCHEMATC
