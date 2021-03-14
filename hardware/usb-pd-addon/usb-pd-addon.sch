@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "USB-PD on Glasgow"
 Date ""
-Rev "V0.8c"
+Rev "V0.8d"
 Comp "License: CC-BY-SA 4.0"
 Comment1 "(C) 2020-2021 Piotr Esden-Tempski <piotr@esden.net>"
 Comment2 "(C) 2020-2021 1BitSquared <info@1bitsquared.com>"
