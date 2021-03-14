@@ -11,6 +11,7 @@
 
 - Control a 5V load switch to drive VBUS for Source operation
   - Will only drive 5V but should tolerate 20V as a sink
+    - This will be achieved using an isolation jumper
 
 - Be able to send VDMs to control debug interfaces on certain computers
   - Need to support SOP'Debug and SOP'Debug messages
@@ -19,14 +20,10 @@
   - These must go down to 1.2V and up to 3.3V
   - The D+/D- and SBU1/SBU2 pairs may both be at 1.8V to 3.3V (same voltage for both)
   - Either or both D+/D- and SBU1/SBU2 pairs may be at 1.2V
-  - Selection of 1.2V or (1.8V to 3.3V) is done by jumpers
+  - Selection of 1.2V or (1.8V to 3.3V) is under software control
 
-- Negotation of PD contract will need to be done in gateware
-  - The timing is too constrained to do this on the python host side
-
-- Level shifter voltage selection must be a physical means
-  - We don't want programming errors blowing up expensive 1.2V CPUs
-  - Use jumpers, and all jumpers out is isolated
+- Negotation of PD contract may need to be done in gateware
+  - The timing may be too constrained to do this on the python host side
 
 - Putting a Luna USB stack in the FPGA is out of scope
   - But we should make it easy to connect a Luna board externally for this
@@ -34,7 +31,7 @@
 - Assembly at JLCPCB
   - Choosing Basic Parts whereever possible to save costs
 
-- Able to measure VBUS both on either the PD controller or the Glasgow ADC (or both)
+- Able to measure VBUS on either the PD controller or the Glasgow ADC (or both)
   - Need a solder bridge to isolate ADC for RevC1 or earlier boards
 
 - All spare glasgow I/O available on via test points
